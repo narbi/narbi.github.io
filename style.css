@@ -9,3 +9,11 @@ img {
   border: 5px solid #999;
   border-radius: 69px;
 }
+.me-over{
+  position:aboslute;
+  background:black;
+  opacity:0;
+}
+.me-over:hover{
+  opacity:0.8;
+}
