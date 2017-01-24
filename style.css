@@ -1,14 +1,11 @@
-body{
-  position: absolute;
-}
+
 article{
   width:100%;
   height:100%;
-  position:absolute;
   text-align:center;
   overflow:hidden;
 }
 img {
-  border: 10px solid #999;
-  border-radius: 67px;
+  border: 5px solid #999;
+  border-radius: 69px;
 }
