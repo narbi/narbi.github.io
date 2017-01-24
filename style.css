@@ -6,11 +6,13 @@ article{
   overflow:hidden;
 }
 .central-icon {
-  background:url('6058578.png');
-  width:150px;
-  height:150px;
+  position:relative;
+  background:url('6058578.png') no-repeat;
+  width:130px;
+  height:130px;
   border: 5px solid #999;
   border-radius: 69px;
+  margin:auto;
 }
 .me-over{
   position:relative;
