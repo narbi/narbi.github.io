@@ -12,9 +12,11 @@ article{
   border-radius: 69px;
 }
 .me-over{
-  position:aboslute;
+  position:relative;
   background:black;
   opacity:0;
+  width:100%;
+  height:100%;
 }
 .me-over:hover{
   opacity:0.8;
