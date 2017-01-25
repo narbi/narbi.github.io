@@ -4,6 +4,7 @@ article{
   height:100%;
   text-align:center;
   overflow:hidden;
+  background:#999999;
 }
 .central-icon {
   position:relative;
@@ -16,16 +17,16 @@ article{
 }
 .me-over{
   position:relative;
-  background:black;
   opacity:0;
   width:100%;
   height:100%;
-}
-.me-over:hover{
   -webkit-animation: mainitem 0.5s ease-in; /* Safari 4.0 - 8.0 */
   animation: mainitem 0.5s ease-in;
 }
-
+.me-over:hover{
+  background:black;
+  border-radius: 69px;
+}
 
 
 @keyframes mainitem {
