@@ -22,8 +22,7 @@ article{
   height:100%;
   border-radius: 69px;
 }
-.me-over:hover{
-  background:black;
+.central-icon:hover{
   -webkit-animation: mainitem 0.5s infinite; /* Safari 4.0 - 8.0 */
   animation: mainitem 0.5s infinite;
 }
