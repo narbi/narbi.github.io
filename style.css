@@ -24,12 +24,12 @@ article{
 }
 .me-over:hover{
   background:black;
-  -webkit-animation: mainitem 0.5s ease-in; /* Safari 4.0 - 8.0 */
-  animation: mainitem 0.5s ease-in;
+  -webkit-animation: mainitem 0.5s infinite; /* Safari 4.0 - 8.0 */
+  animation: mainitem 0.5s infinite;
 }
 
 
 @keyframes mainitem {
-    0%   {top: -100px;opacity:0.1;}
-    100% {top: 0px; opacity:0.8; }
+    0%   {transform:rotate(-180deg)}
+    100% {transform:rotate(180deg)}
 }
