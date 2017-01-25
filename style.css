@@ -22,14 +22,14 @@ article{
   height:100%;
 }
 .me-over:hover{
-  -webkit-animation: mainitem 5s infinite; /* Safari 4.0 - 8.0 */
-  animation: mainitem 5s infinite;
+  -webkit-animation: mainitem 1s infinite; /* Safari 4.0 - 8.0 */
+  animation: mainitem 1s infinite;
 }
 
 
 
 @keyframes mainitem {
-    0%   {top: -100px;  opacity:0.1;}
+    0%   {top: -100px;opacity:0.1;}
     25%  {top: -80px; opacity:0.3; background: blue;}
     50%  {top: -60px; opacity:0.5; background: yellow;}
     75%  {top: -40px; opacity:0.7; background: green;}
