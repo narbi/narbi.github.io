@@ -22,8 +22,8 @@ article{
   height:100%;
 }
 .me-over:hover{
-  -webkit-animation: mainitem 0.5s ease; /* Safari 4.0 - 8.0 */
-  animation: mainitem 0.5s ease;
+  -webkit-animation: mainitem 0.5s ease-in; /* Safari 4.0 - 8.0 */
+  animation: mainitem 0.5s ease-in;
 }
 
 
