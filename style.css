@@ -30,8 +30,8 @@ article{
 
 @keyframes mainitem {
     0%   {top: -100px;opacity:0.1;}
-    25%  {top: -80px; opacity:0.3; background: blue;}
-    50%  {top: -60px; opacity:0.5; background: yellow;}
-    75%  {top: -40px; opacity:0.7; background: green;}
-    100% {top: 0px; opacity:0.9; }
+    25%  {top: -80px; opacity:0.3;}
+    50%  {top: -60px; opacity:0.5;}
+    75%  {top: -40px; opacity:0.7;}
+    100% {top: 0px; opacity:0.8; }
 }
