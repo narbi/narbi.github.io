@@ -9,20 +9,19 @@ article{
   text-align:center;
   overflow:hidden;
   background:#f2f2f2;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  /* bring your own prefixes */
-  transform: translate(-50%, -50%);
 }
 .central-icon {
-  position:relative;
-  background:url('6058578.png') no-repeat;
   width:130px;
   height:130px;
   border: 5px solid #999;
   border-radius: 69px;
   margin:auto;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+  background:url('6058578.png') no-repeat;
 }
 .me-over{
   position:relative;
