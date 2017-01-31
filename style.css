@@ -37,6 +37,6 @@ article{
 
 
 @keyframes mainitem {
-    0%   { filter: blur(20px) grayscale(20%);}
-    100% { filter: blur(50px) grayscale(80%);}
+    0%   { filter: blur(5px) grayscale(10%);}
+    100% { filter: blur(20px) grayscale(40%);}
 }
