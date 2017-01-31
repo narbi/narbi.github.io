@@ -31,8 +31,8 @@ article{
   border-radius: 69px;
 }
 .central-icon:hover{
-  -webkit-animation: mainitem 0.5s infinite; /* Safari 4.0 - 8.0 */
-  animation: mainitem 0.5s infinite;
+  -webkit-animation: mainitem 0.5s ease-in-out; /* Safari 4.0 - 8.0 */
+  animation: mainitem 0.5s ease-in-out;
 }
 
 
