@@ -37,6 +37,6 @@ article{
 
 
 @keyframes mainitem {
-    0%   {transform:rotate(-180deg)}
-    100% {transform:rotate(180deg)}
+    0%   { filter: blur(20px) grayscale(20%);}
+    100% { filter: blur(50px) grayscale(80%);}
 }
