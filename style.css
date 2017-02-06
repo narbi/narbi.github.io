@@ -30,10 +30,10 @@ article{
    transform: translate(80px, 30px);
 }
 .facebook{
-   transform: translate(-60px, -80px);
+   transform: translate(-60px, -30px);
 }
 .linkedin{
-   transform: translate(60px, 80px);
+   transform: translate(60px, 100px);
 }
 .central-icon:hover{
   -webkit-animation: mainitem 1.5s ease-in; /* Safari 4.0 - 8.0 */
