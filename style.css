@@ -35,19 +35,13 @@ article{
 .linkedin{
    transform: translate(60px, 120px);
 }
-
-.instagram{
-   transform: translate(90px, 30px);
-}
 .skype{
    transform: translate(-60px, 120px);
 }
-.pgp{
+.instagram{
    transform: translate(60px, -30px);
 }
-.bio{
-   transform: translate(60px, 120px);
-}
+
 .central-icon:hover{
   -webkit-animation: mainitem 1.5s ease-in; /* Safari 4.0 - 8.0 */
   animation: mainitem 1.5s ease-in;
