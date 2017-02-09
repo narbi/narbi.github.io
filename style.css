@@ -22,6 +22,10 @@ article{
   /* bring your own prefixes */
   transform: translate(-50%, -50%);
   background:url('6058578.png') no-repeat;
+  z-index:0;
+}
+.central-icon div{
+z-index:1;
 }
 .github{
    transform: translate(-100px, 30px);
