@@ -37,10 +37,10 @@ article{
 }
 
 .instagram{
-   transform: translate(-80px, 30px);
+   transform: translate(-100px, -30px);
 }
 .skype{
-   transform: translate(80px, 30px);
+   transform: translate(-100px, 120px);
 }
 .pgp{
    transform: translate(-40px, -30px);
