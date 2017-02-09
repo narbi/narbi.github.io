@@ -37,16 +37,16 @@ article{
 }
 
 .instagram{
-   transform: translate(60px, 30px);
+   transform: translate(90px, 30px);
 }
 .skype{
    transform: translate(-60px, 120px);
 }
 .pgp{
-   transform: translate(-40px, -30px);
+   transform: translate(0px, -30px);
 }
 .bio{
-   transform: translate(40px, 120px);
+   transform: translate(60px, 120px);
 }
 .central-icon:hover{
   -webkit-animation: mainitem 1.5s ease-in; /* Safari 4.0 - 8.0 */
