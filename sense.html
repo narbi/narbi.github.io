@@ -2,7 +2,9 @@
 <html lang="en-us">
 <head>
 <style>
-body { background-color: #0e83cd; }
+body {
+  background-color: #0e83cd;
+}
 
 #container {
   height: 270px;
@@ -12,7 +14,9 @@ body { background-color: #0e83cd; }
   width: 248px;
 }
 
-#container div { position: absolute; }
+#container div {
+  position: absolute;
+}
 
 #beaker {
   border: 10px solid #FFF;
@@ -36,8 +40,13 @@ body { background-color: #0e83cd; }
   width: 30px;
 }
 
-#beaker:before { left: -50px; }
-#beaker:after { right: -50px; }
+#beaker:before {
+  left: -50px;
+}
+
+#beaker:after {
+  right: -50px;
+}
 
 #liquid {
   background-color: #3C6;
@@ -73,27 +82,67 @@ body { background-color: #0e83cd; }
 }
 
 @-webkit-keyframes bubble {
-  0% { bottom: 0; }
-
-   50% {
-     background-color: rgba(255, 255, 255, 0.2);
-      bottom: 80px;
-   }
-
-   100% {
-     background-color: rgba(255, 255, 255, 0);
-      bottom: 160px;
-   }
-}
-
-@for $i from 1 through 7 {
-  .bubble:nth-child(#{$i}) {
-    left: random(180) * 1px;
-    -webkit-animation-delay: random() * 30ms;
-    -webkit-animation-duration: (random(10) + 3) * 100ms;
-    -webkit-transform: scale((random(10) + 3)/10);
+  0% {
+    bottom: 0;
+  }
+  50% {
+    background-color: rgba(255, 255, 255, 0.2);
+    bottom: 80px;
+  }
+  100% {
+    background-color: rgba(255, 255, 255, 0);
+    bottom: 160px;
   }
 }
+.bubble:nth-child(1) {
+  left: 112px;
+  -webkit-animation-delay: 7.99209ms;
+  -webkit-animation-duration: 700ms;
+  -webkit-transform: scale(0.6);
+}
+
+.bubble:nth-child(2) {
+  left: 102px;
+  -webkit-animation-delay: 15.9388ms;
+  -webkit-animation-duration: 1100ms;
+  -webkit-transform: scale(0.5);
+}
+
+.bubble:nth-child(3) {
+  left: 85px;
+  -webkit-animation-delay: 21.57434ms;
+  -webkit-animation-duration: 1300ms;
+  -webkit-transform: scale(0.5);
+}
+
+.bubble:nth-child(4) {
+  left: 150px;
+  -webkit-animation-delay: 28.65468ms;
+  -webkit-animation-duration: 400ms;
+  -webkit-transform: scale(1);
+}
+
+.bubble:nth-child(5) {
+  left: 91px;
+  -webkit-animation-delay: 6.93406ms;
+  -webkit-animation-duration: 400ms;
+  -webkit-transform: scale(1.2);
+}
+
+.bubble:nth-child(6) {
+  left: 150px;
+  -webkit-animation-delay: 23.49506ms;
+  -webkit-animation-duration: 500ms;
+  -webkit-transform: scale(1.2);
+}
+
+.bubble:nth-child(7) {
+  left: 73px;
+  -webkit-animation-delay: 5.61562ms;
+  -webkit-animation-duration: 700ms;
+  -webkit-transform: scale(1.3);
+}
+
 </style>
 </head>
 <body>
