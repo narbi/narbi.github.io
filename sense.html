@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<style>
+body {
+  background-color: #f3f3f3;
+}
+#sensor{
+float:left;
+text-align: center;
+width: 100%;
+margin-top:15%;
+-ms-transform: scale(2); /* IE 9 */
+-webkit-transform: scale(2); /* Chrome, Safari, Opera */
+transform: scale(2);
+}
+#sensor a {transform: scale(1);text-align:center;}
+	
+#actuator{
+float:right;
+width:25%;
+-ms-transform: scale(0.8); /* IE 9 */
+-webkit-transform: scale(0.8); /* Chrome, Safari, Opera */
+transform: scale(0.8);
+}
+#actuator a {transform: scale(1);text-align:center;}
+#syringeOne {
+  height: 270px;
+  margin: 50px auto;
+  position: relative;
+  width: 248px;
+}
+
+#syringeOne div {
+  position: absolute;
+}
+  
+#syringeTwo {
+  height: 270px;
+  margin: 50px auto;
+  position: relative;
+  width: 248px;
+}
+
+#syringeTwo div {
+  position: absolute;
+}
+
+.beaker {
+  border: 10px solid #FFF;
+  border-radius: 0 0 30px 30px;
+  height: 200px;
+  left: 14px;
+  bottom: 0;
+  width: 80px;
+  -ms-transform: rotate(49deg); /* IE 9 */
+  -webkit-transform: rotate(49deg); /* Chrome, Safari, Opera */
+  transform: rotate(49deg);
+}
+
+.beaker:before{
+  left: -50px;
+  border: 10px solid #FFF;
+  border-bottom: 0;
+  border-radius: 30px 30px 0 0;
+  content: '';
+  height: 30px;
+  position: absolute;
+  top: -40px;
+  width: 30px;
+}
+  
+.beaker:after {
+border: 3px solid #FFF;
+content: '';
+height: 45px;
+position: absolute;
+top: 205px;
+right: 36px;
+}
+
+.liquid {
+  background-color: #3C6;
+  border: 10px solid #3C6;
+  border-radius: 0 0 20px 20px;
+  bottom: 0;
+  height: 170px;
+  overflow: hidden;
+  width: 60px;
+}
+
+.liquid:after {
+  background-color: rgba(255, 255, 255, 0.25);
+  bottom: -10px;
+  content: '';
+  height: 200px;
+  left: -40px;
+  position: absolute;
+  transform: rotate(30deg);
+  -webkit-transform: rotate(15deg);
+  width: 60px;
+}
+
+.liquid .bubble {
+  -webkit-animation-name: bubble;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  background-color: rgba(255, 255, 255, 0.2);
+  bottom: 0;
+  border-radius: 10px;
+  height: 20px;
+  width: 20px;
+}
+
+@-webkit-keyframes bubble {
+  0% {
+    bottom: 0;
+  }
+  50% {
+    background-color: rgba(255, 255, 255, 0.2);
+    bottom: 80px;
+  }
+  100% {
+    background-color: rgba(255, 255, 255, 0);
+    bottom: 160px;
+  }
+}
+.bubble:nth-child(1) {
+  left: 18px;
+  -webkit-animation-delay: 7.99209ms;
+  -webkit-animation-duration: 700ms;
+  -webkit-transform: scale(0.6);
+}
+
+.bubble:nth-child(2) {
+  left: 32px;
+  -webkit-animation-delay: 15.9388ms;
+  -webkit-animation-duration: 1100ms;
+  -webkit-transform: scale(0.5);
+}
+
+.bubble:nth-child(3) {
+  left: 45px;
+  -webkit-animation-delay: 21.57434ms;
+  -webkit-animation-duration: 1300ms;
+  -webkit-transform: scale(0.5);
+}
+
+.bubble:nth-child(4) {
+  left: 50px;
+  -webkit-animation-delay: 28.65468ms;
+  -webkit-animation-duration: 400ms;
+  -webkit-transform: scale(1);
+}
+
+.bubble:nth-child(5) {
+  left: 56px;
+  -webkit-animation-delay: 6.93406ms;
+  -webkit-animation-duration: 400ms;
+  -webkit-transform: scale(1.2);
+}
+
+.bubble:nth-child(6) {
+  left: 2px;
+  -webkit-animation-delay: 23.49506ms;
+  -webkit-animation-duration: 500ms;
+  -webkit-transform: scale(1.2);
+}
+
+.bubble:nth-child(7) {
+  left: 33px;
+  -webkit-animation-delay: 5.61562ms;
+  -webkit-animation-duration: 700ms;
+  -webkit-transform: scale(1.3);
+}
+/*HEART*/
+ #heart-small { display: inline-block; width: 100px; height: 90px; margin-left: -96px; position: relative; top: 11px; text-indent: -9999px; overflow: hidden; }
+
+#heart-small:before, #heart-small:after { content: ""; width: 45px; height: 70px; position: absolute; left: 45px; top: 10px; background: #da1b4a;
+-moz-border-radius: 50px 50px 0 0;
+	 border-radius: 50px 50px 0 0;
+-webkit-transform: rotate(-45deg);
+   -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+     -o-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+-webkit-transform-origin: 0 100%;
+   -moz-transform-origin: 0 100%;
+    -ms-transform-origin: 0 100%;
+     -o-transform-origin: 0 100%;
+        transform-origin: 0 100%; }
+		
+#heart-small:after { left: 0;
+-webkit-transform: rotate(45deg);
+   -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+     -o-transform: rotate(45deg);
+        transform: rotate(45deg);
+-webkit-transform-origin: 100% 100%;
+   -moz-transform-origin: 100% 100%;
+    -ms-transform-origin: 100% 100%;
+     -o-transform-origin: 100% 100%;
+       transform-origin :100% 100%;
+}
+
+#heart-big { display: inline-block; width: 100px; height: 90px; position: relative; left: 3px; top: 6px; text-indent: -9999px; overflow: hidden;
+-webkit-animation: heartbig_animation 0.8s infinite;
+-moz-animation: heartbig_animation 0.8s infinite;
+-o-animation: heartbig_animation 0.8s infinite;
+animation: heartbig_animation 0.8s infinite;
+}
+
+#heart-big:before, #heart-big:after { content: ""; width: 50px; height: 80px; position: absolute; left: 50px; top: 10px; background: #da1b4a;
+-moz-border-radius: 50px 50px 0 0;
+	 border-radius: 50px 50px 0 0;
+-webkit-transform: rotate(-45deg);
+   -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+     -o-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+-webkit-transform-origin: 0 100%;
+   -moz-transform-origin: 0 100%;
+    -ms-transform-origin: 0 100%;
+     -o-transform-origin: 0 100%;
+        transform-origin: 0 100%; }
+		
+#heart-big:after { left: 0;
+-webkit-transform: rotate(45deg);
+   -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+     -o-transform: rotate(45deg);
+        transform: rotate(45deg);
+-webkit-transform-origin: 100% 100%;
+   -moz-transform-origin: 100% 100%;
+    -ms-transform-origin: 100% 100%;
+     -o-transform-origin: 100% 100%;
+        transform-origin: 100% 100%;
+}
+	   
+@-webkit-keyframes heartbig_animation {
+0% { opacity: 1; }
+50% { opacity: 0; }
+100% { opacity: 0; }}
+@-moz-keyframes heartbig_animation {
+0% { opacity: 1; }
+50% { opacity: 0; }
+100% { opacity: 0; }}
+@-o-keyframes heartbig_animation {
+0% { opacity: 1; }
+50% { opacity: 0; }
+100% { opacity: 0; }}
+@keyframes heartbig_animation {
+0% { opacity: 1; }
+50% { opacity: 0; }
+100% { opacity: 0; }}
+	
+ /*HEART rate*/
+.heart-rate {
+  width: 150px;
+  height: 73px;
+  position: relative;
+  margin: 20px auto;
+}
+
+.fade-in {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #f1f1f1;
+  top: 0;
+  right: 0;
+  animation: heartRateIn 2.5s linear infinite;
+}
+
+.fade-out {
+  position: absolute;
+  width: 120%;
+  height: 100%;
+  top: 0;
+  left: -120%;
+  animation: heartRateOut 2.5s linear infinite;
+  background: rgba(241, 241, 241, 1);
+  background: -moz-linear-gradient(left, rgba(241, 241, 241, 1) 0%, rgba(241, 241, 241, 1) 50%, rgba(241, 241, 241, 0) 100%);
+  background: -webkit-linear-gradient(left, rgba(241, 241, 241, 1) 0%, rgba(241, 241, 241, 1) 50%, rgba(241, 241, 241, 0) 100%);
+  background: -o-linear-gradient(left, rgba(241, 241, 241, 1) 0%, rgba(241, 241, 241, 1) 50%, rgba(241, 241, 241, 0) 100%);
+  background: -ms-linear-gradient(left, rgba(241, 241, 241, 1) 0%, rgba(241, 241, 241, 1) 50%, rgba(241, 241, 241, 0) 100%);
+  background: linear-gradient(to right, rgba(241, 241, 241, 1) 0%, rgba(224155, 241, 241, 1) 80%, rgba(241, 241, 241, 0) 100%);
+}
+
+@keyframes heartRateIn {
+  0% {
+    width: 100%;
+  }
+  50% {
+    width: 0;
+  }
+  100% {
+    width: 0;
+  }
+}
+
+@keyframes heartRateOut {
+  0% {
+    left: -120%;
+  }
+  30% {
+    left: -120%;
+  }
+  100% {
+    left: 0;
+  }
+}
+/*BUTTONS*/
+/* FADE */
+.btnFade{
+border: 2px solid #1ECD97;
+font-family: arial;
+color: #1ECD97;
+padding: 4px 6px;
+border-radius: 20px;
+text-decoration: none;
+}
+.btnFade.btnBlueGreen:hover {
+  background: #1ECD97;	
+  color:white;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+	
+</style>
+</head>
+<body>
+<div id="sensor">
+<div id="heart-big" title="SRDCE">♥</div>
+<div id="heart-small" title="SRDCE">♥</div>
+<div class="heart-rate">
+  <svg version="1.0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="150px" height="73px" viewBox="0 0 150 73" enable-background="new 0 0 150 73" xml:space="preserve">
+    <polyline fill="none" stroke="#009B9E" stroke-width="3" stroke-miterlimit="10" points="0,45.486 38.514,45.486 44.595,33.324 50.676,45.486 57.771,45.486 62.838,55.622 71.959,9 80.067,63.729 84.122,45.486 97.297,45.486 103.379,40.419 110.473,45.486 150,45.486"
+    />
+  </svg>
+  <div class="fade-in"></div>
+  <div class="fade-out"></div>
+</div>
+<a href="" title="Button fade blue/green" class="button btnFade btnBlueGreen">Sense..</a>
+</div>
+
+</body>
+</html>
