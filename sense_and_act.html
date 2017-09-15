@@ -14,20 +14,28 @@ margin-top:15%;
 -webkit-transform: scale(2); /* Chrome, Safari, Opera */
 transform: scale(2);
 }
-#sensor a {transform: scale(1);text-align:center;}
+	
+#sensor a {
+	transform: scale(1);
+	text-align:center;
+}
 	
 #actuator{
 float:right;
 width:30%;
--ms-transform: scale(0.8); /* IE 9 */
--webkit-transform: scale(0.8); /* Chrome, Safari, Opera */
 }
-#actuator a {transform: scale(1);text-align:center;}
+#actuator a {
+	transform: scale(1);
+	text-align:center;
+}
 #syringeOne {
   height: 270px;
   margin: 50px auto;
   position: relative;
   width: 248px;
+  transform: scale(0.8);
+  -ms-transform: scale(0.8); /* IE 9 */
+  -webkit-transform: scale(0.8); /* Chrome, Safari, Opera */
 }
 
 #syringeOne div {
@@ -40,6 +48,8 @@ width:30%;
   position: relative;
   width: 248px;
   transform: scale(0.8);
+  -ms-transform: scale(0.8); /* IE 9 */
+  -webkit-transform: scale(0.8); /* Chrome, Safari, Opera */
 }
 
 #syringeTwo div {
@@ -355,9 +365,8 @@ text-decoration: none;
       <div class="bubble"></div>
     </div>
   </div>
-  
 </div>
-	<a href="" title="Button fade blue/green" class="button btnFade btnBlueGreen">Inject HIGH</a>
+<button><a href="" title="Button fade blue/green" class="button btnFade btnBlueGreen">Inject HIGH</a></button>
   <div id="syringeTwo">
    <div class="beaker">
     <div class="liquid">
@@ -371,7 +380,7 @@ text-decoration: none;
     </div>
   </div>
 </div>
-	 <a href="" title="Button fade blue/green" class="button btnFade btnBlueGreen">Inject LOW</a>
+<button><a href="" title="Button fade blue/green" class="button btnFade btnBlueGreen">Inject LOW</a></button>
 	</div>
 </body>
 </html>
