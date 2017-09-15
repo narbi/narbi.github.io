@@ -3,13 +3,12 @@
 <head>
 <style>
 body {
-  background-color: #0e83cd;
+  background-color: #f3f3f3;
 }
 
-#container {
+#syringeOne {
   height: 270px;
   margin: 50px auto;
-  overflow: hidden;
   position: relative;
   width: 248px;
 }
@@ -18,7 +17,7 @@ body {
   position: absolute;
 }
 
-#beaker {
+.beaker {
   border: 10px solid #FFF;
   border-top: 0;
   border-radius: 0 0 30px 30px;
@@ -31,8 +30,8 @@ body {
   transform: rotate(49deg);
 }
 
-#beaker:before,
-#beaker:after {
+.beaker:before,
+.beaker:after {
   border: 10px solid #FFF;
   border-bottom: 0;
   border-radius: 30px 30px 0 0;
@@ -43,15 +42,15 @@ body {
   width: 30px;
 }
 
-#beaker:before {
+.beaker:before {
   left: -50px;
 }
 
-#beaker:after {
+.beaker:after {
   right: -50px;
 }
 
-#liquid {
+.liquid {
   background-color: #3C6;
   border: 10px solid #3C6;
   border-radius: 0 0 20px 20px;
@@ -61,7 +60,7 @@ body {
   width: 180px;
 }
 
-#liquid:after {
+.liquid:after {
   background-color: rgba(255, 255, 255, 0.25);
   bottom: -10px;
   content: '';
@@ -73,7 +72,7 @@ body {
   width: 110px;
 }
 
-#liquid .bubble {
+.liquid .bubble {
   -webkit-animation-name: bubble;
   -webkit-animation-iteration-count: infinite;
   -webkit-animation-timing-function: linear;
@@ -149,9 +148,9 @@ body {
 </style>
 </head>
 <body>
-<div id="container">
-   <div id="beaker">
-    <div id="liquid">
+<div id="syringeOne">
+   <div class="beaker">
+    <div class="liquid">
       <div class="bubble"></div>
       <div class="bubble"></div>
       <div class="bubble"></div>
