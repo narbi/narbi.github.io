@@ -30,7 +30,6 @@ body {
 
 .beaker {
   border: 10px solid #FFF;
-  border-top: 0;
   border-radius: 0 0 30px 30px;
   height: 200px;
   left: 14px;
@@ -41,8 +40,8 @@ body {
   transform: rotate(49deg);
 }
 
-.beaker:before,
-.beaker:after {
+.beaker:before{
+  left: -50px;
   border: 10px solid #FFF;
   border-bottom: 0;
   border-radius: 30px 30px 0 0;
@@ -52,12 +51,16 @@ body {
   top: -40px;
   width: 30px;
 }
-
-.beaker:before {
-  left: -50px;
-}
-
+  
 .beaker:after {
+  border: 10px solid #FFF;
+  border-bottom: 0;
+  border-radius: 30px 30px 0 0;
+  content: '';
+  height: 30px;
+  position: absolute;
+  top: -40px;
+  width: 30px;
   right: -50px;
 }
 
@@ -155,11 +158,94 @@ body {
   -webkit-animation-duration: 700ms;
   -webkit-transform: scale(1.3);
 }
+/*HEART*/
+ #heart-small { display: inline-block; width: 100px; height: 90px; margin-left: -96px; position: relative; top: 11px; text-indent: -9999px; overflow: hidden; }
 
+#heart-small:before, #heart-small:after { content: ""; width: 45px; height: 70px; position: absolute; left: 45px; top: 10px; background: #da1b4a;
+-moz-border-radius: 50px 50px 0 0;
+	 border-radius: 50px 50px 0 0;
+-webkit-transform: rotate(-45deg);
+   -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+     -o-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+-webkit-transform-origin: 0 100%;
+   -moz-transform-origin: 0 100%;
+    -ms-transform-origin: 0 100%;
+     -o-transform-origin: 0 100%;
+        transform-origin: 0 100%; }
+		
+#heart-small:after { left: 0;
+-webkit-transform: rotate(45deg);
+   -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+     -o-transform: rotate(45deg);
+        transform: rotate(45deg);
+-webkit-transform-origin: 100% 100%;
+   -moz-transform-origin: 100% 100%;
+    -ms-transform-origin: 100% 100%;
+     -o-transform-origin: 100% 100%;
+       transform-origin :100% 100%;
+}
+
+#heart-big { display: inline-block; width: 100px; height: 90px; position: relative; left: 3px; top: 6px; text-indent: -9999px; overflow: hidden;
+-webkit-animation: heartbig_animation 0.8s infinite;
+-moz-animation: heartbig_animation 0.8s infinite;
+-o-animation: heartbig_animation 0.8s infinite;
+animation: heartbig_animation 0.8s infinite;
+}
+
+#heart-big:before, #heart-big:after { content: ""; width: 50px; height: 80px; position: absolute; left: 50px; top: 10px; background: #da1b4a;
+-moz-border-radius: 50px 50px 0 0;
+	 border-radius: 50px 50px 0 0;
+-webkit-transform: rotate(-45deg);
+   -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+     -o-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+-webkit-transform-origin: 0 100%;
+   -moz-transform-origin: 0 100%;
+    -ms-transform-origin: 0 100%;
+     -o-transform-origin: 0 100%;
+        transform-origin: 0 100%; }
+		
+#heart-big:after { left: 0;
+-webkit-transform: rotate(45deg);
+   -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+     -o-transform: rotate(45deg);
+        transform: rotate(45deg);
+-webkit-transform-origin: 100% 100%;
+   -moz-transform-origin: 100% 100%;
+    -ms-transform-origin: 100% 100%;
+     -o-transform-origin: 100% 100%;
+        transform-origin: 100% 100%;
+}
+	   
+@-webkit-keyframes heartbig_animation {
+0% { opacity: 1; }
+50% { opacity: 0; }
+100% { opacity: 0; }}
+@-moz-keyframes heartbig_animation {
+0% { opacity: 1; }
+50% { opacity: 0; }
+100% { opacity: 0; }}
+@-o-keyframes heartbig_animation {
+0% { opacity: 1; }
+50% { opacity: 0; }
+100% { opacity: 0; }}
+@keyframes heartbig_animation {
+0% { opacity: 1; }
+50% { opacity: 0; }
+100% { opacity: 0; }}
+  
 </style>
 </head>
 <body>
-<div id="syringeOne">
+<div id="heartMonitor">
+<div id="heart-big" title="SRDCE">♥</div>
+<div id="heart-small" title="SRDCE">♥</div>
+</div>
    <div class="beaker">
     <div class="liquid">
       <div class="bubble"></div>
