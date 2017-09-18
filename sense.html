@@ -349,8 +349,50 @@ text-decoration: none;
 		  <div class="fade-out"></div>
 	</div>
 </div>
-<a href="" title="Button fade blue/green" class="button btnFade btnBlueGreen">Sense..</a>
+<button id="sense" class="button btnFade btnBlueGreen" type="button" onclick="buttonclick(this.id)">Sense</button>
 </div>
 
 </body>
+<script>
+  function buttonclick(clickedid)
+  {
+
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.open("get", "/"+clickedid);
+
+    xmlhttp.onreadystatechange = function()
+    {
+      // DONE
+      if (xmlhttp.readyState == 4)
+      {
+        switch(xmlhttp.status)
+        {
+          case 200:
+            alert(xmlhttp.responseText);
+        var rgb = xmlhttp.responseText.split(',');
+        if (parseInt(rgb[0])>parseInt(rgb[1]) && parseInt(rgb[0])>parseInt(rgb[2])){
+            document.body.style.backgroundColor = "red";
+        } else if (parseInt(rgb[1])>parseInt(rgb[0]) && parseInt(rgb[1])>parseInt(rgb[2])){
+            document.body.style.backgroundColor = "green";
+        }  else if (parseInt(rgb[2])>parseInt(rgb[1]) && parseInt(rgb[2])>parseInt(rgb[0])){
+            document.body.style.backgroundColor = "blue";
+        }
+
+            break;
+          case 404:
+            alert("Not Found");
+            break;
+          case 500:
+            alert("Internal Server Error");
+            break;
+          default:
+            alert("Unexpected Error. HTTP Status: " + xmlhttp.status);
+        }
+      }
+    };
+
+    xmlhttp.send();
+  }
+</script>
+
 </html>
