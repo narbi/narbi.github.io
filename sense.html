@@ -332,14 +332,20 @@ text-decoration: none;
   transition: background-color 0.3s, color 0.3s;
 }
 
+#heart-small.red:before,#heart-small.red:after{background:red;}
+#heart-small.green:before,#heart-small.green:after{background:green;}
+#heart-small.blue:before,#heart-small.blue:after{background:blue;}
+#heart-big.red:before,#heart-big.red:after{background:red;}
+#heart-big.green:before,#heart-big.green:after{background:green;}
+#heart-big.blue:before,#heart-big.blue:after{background:blue;}
 	
 </style>
 </head>
 <body>
 <div id="sensor">
 	<div class="items">
-		<div id="heart-big" title="SRDCE">♥</div>
-		<div id="heart-small" title="SRDCE">♥</div>
+		<div id="heart-big" title="SRDCE">â™¥</div>
+		<div id="heart-small" title="SRDCE">â™¥</div>
 		<div class="heart-rate">
 		  <svg version="1.0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="150px" height="73px" viewBox="0 0 150 73" enable-background="new 0 0 150 73" xml:space="preserve">
 		    <polyline fill="none" stroke="#009B9E" stroke-width="3" stroke-miterlimit="10" points="0,45.486 38.514,45.486 44.595,33.324 50.676,45.486 57.771,45.486 62.838,55.622 71.959,9 80.067,63.729 84.122,45.486 97.297,45.486 103.379,40.419 110.473,45.486 150,45.486"
@@ -371,11 +377,26 @@ text-decoration: none;
             alert(xmlhttp.responseText);
         var rgb = xmlhttp.responseText.split(',');
         if (parseInt(rgb[0])>parseInt(rgb[1]) && parseInt(rgb[0])>parseInt(rgb[2])){
-            document.body.style.backgroundColor = "red";
+            document.getElementById("heart-big").classList.add('red');
+            document.getElementById("heart-small").classList.add('red');
+            document.getElementById("heart-big").classList.remove('blue');
+            document.getElementById("heart-small").classList.remove('blue');
+            document.getElementById("heart-big").classList.remove('green');
+            document.getElementById("heart-small").classList.remove('green');
         } else if (parseInt(rgb[1])>parseInt(rgb[0]) && parseInt(rgb[1])>parseInt(rgb[2])){
-            document.body.style.backgroundColor = "green";
+            document.getElementById("heart-big").classList.add('green');
+            document.getElementById("heart-small").classList.add('green');
+            document.getElementById("heart-big").classList.remove('blue');
+            document.getElementById("heart-small").classList.remove('blue');
+            document.getElementById("heart-big").classList.remove('red');
+            document.getElementById("heart-small").classList.remove('red');
         }  else if (parseInt(rgb[2])>parseInt(rgb[1]) && parseInt(rgb[2])>parseInt(rgb[0])){
-            document.body.style.backgroundColor = "blue";
+            document.getElementById("heart-big").classList.add('blue');
+            document.getElementById("heart-small").classList.add('blue');
+            document.getElementById("heart-big").classList.remove('red');
+            document.getElementById("heart-small").classList.remove('red');
+            document.getElementById("heart-big").classList.remove('green');
+            document.getElementById("heart-small").classList.remove('green');
         }
 
             break;
