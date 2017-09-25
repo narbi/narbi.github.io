@@ -500,8 +500,15 @@ color:#1fc1c8;
 
 	
 /*ADDED*/
-	.pushing{width:10px;height:4px;background:white;}
-	.needle{width:10px;height:4px;background:white;}
+.pushing{
+width: 16px;
+height: 16px;
+background: white;
+top: 188px;
+left: -43px;
+transform: rotate(45deg);
+}
+.needle{width:60px;height:10px;background:white;}
 	
 </style>
 </head>
@@ -525,7 +532,7 @@ color:#1fc1c8;
 </div>
 <div id="actuator">
   <div id="syringeOne">
-	  <div class="pushing"></div>
+  <div class="pushing"></div>
    <div class="beaker">
     <div class="liquid blue">
       <div class="bubble"></div>
@@ -537,10 +544,11 @@ color:#1fc1c8;
       <div class="bubble"></div>
     </div>
   </div>
-	  <div class="needle"></div>
+  <div class="needle"></div>
 </div>
 <a href="" title="inject high" class="button btnFade btnBlueGreen">Inject HIGH</a>
   <div id="syringeTwo">
+  <div class="pushing"></div>
    <div class="beaker">
     <div class="liquid red">
       <div class="bubble"></div>
@@ -552,6 +560,7 @@ color:#1fc1c8;
       <div class="bubble"></div>
     </div>
   </div>
+ <div class="needle"></div>
 </div>
 <a href="" title="inject low" class="button btnFade btnBlueGreen">Inject LOW</a>
 	</div>
