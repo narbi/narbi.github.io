@@ -498,11 +498,16 @@ color:#1fc1c8;
 #heart-big.green:before,#heart-big.green:after{background:green;}
 #heart-big.blue:before,#heart-big.blue:after{background:blue;}
 
+	
+/*ADDED*/
+	.pushing{width:10px;height:4px;background:white;}
+	.needle{width:10px;height:4px;background:white;}
+	
 </style>
 </head>
 <body>
 <div id="toggles">
-	<input type="checkbox" name="checkbox1" id="checkbox1" class="ios-toggle" checked=""/>
+	<input type="checkbox" name="checkbox1" id="checkbox1" class="ios-toggle"/>
 	<label for="checkbox1" class="checkbox-label" data-off=" " data-on="automated"></label>	
 </div>
 <div id="sensor">
@@ -520,6 +525,7 @@ color:#1fc1c8;
 </div>
 <div id="actuator">
   <div id="syringeOne">
+	  <div class="pushing"></div>
    <div class="beaker">
     <div class="liquid blue">
       <div class="bubble"></div>
@@ -531,6 +537,7 @@ color:#1fc1c8;
       <div class="bubble"></div>
     </div>
   </div>
+	  <div class="needle"></div>
 </div>
 <a href="" title="inject high" class="button btnFade btnBlueGreen">Inject HIGH</a>
   <div id="syringeTwo">
