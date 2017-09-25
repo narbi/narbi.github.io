@@ -66,7 +66,7 @@ font-family:Helvetica Neue,helvetica,arial,verdana,sans-serif;
   height: 200px;
   left: 14px;
   bottom: 0;
-  width: 80px;
+  width: 60px;
   -ms-transform: rotate(49deg); /* IE 9 */
   -webkit-transform: rotate(49deg); /* Chrome, Safari, Opera */
   transform: rotate(49deg);
@@ -79,29 +79,40 @@ font-family:Helvetica Neue,helvetica,arial,verdana,sans-serif;
     height: 91px;
     position: absolute;
     top: -102px;
-    width: 30px;
+    width: 12px;
     background-color:white;
 }
   
 .beaker:after {
 border: 3px solid #FFF;
 content: '';
-height: 45px;
+height: 88px;
 position: absolute;
 top: 205px;
-right: 36px;
+right: 30px;
 }
 
 .liquid {
-  background-color: #3C6;
-  border: 10px solid #3C6;
-  border-radius: 0 0 20px 20px;
   bottom: 0;
   height: 170px;
   overflow: hidden;
-  width: 60px;
+  width: 40px;
 }
-
+.liquid.red{
+  background-color: red;
+  border: 10px solid red;
+  border-radius: 0 0 20px 20px;
+}
+.liquid.green{
+  background-color: #3C6;
+  border: 10px solid #3C6;
+  border-radius: 0 0 20px 20px;
+}
+.liquid.blue{
+  background-color: blue;
+  border: 10px solid blue;
+  border-radius: 0 0 20px 20px;
+}
 .liquid:after {
   background-color: rgba(255, 255, 255, 0.25);
   bottom: -10px;
@@ -504,7 +515,7 @@ color:#1fc1c8;
 <div id="actuator">
   <div id="syringeOne">
    <div class="beaker">
-    <div class="liquid">
+    <div class="liquid blue">
       <div class="bubble"></div>
       <div class="bubble"></div>
       <div class="bubble"></div>
@@ -518,7 +529,7 @@ color:#1fc1c8;
 <a href="" title="inject high" class="button btnFade btnBlueGreen">Inject HIGH</a>
   <div id="syringeTwo">
    <div class="beaker">
-    <div class="liquid">
+    <div class="liquid red">
       <div class="bubble"></div>
       <div class="bubble"></div>
       <div class="bubble"></div>
