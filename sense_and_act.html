@@ -3,7 +3,7 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">	
 <style>
-
+html, body{height:100%;}
 body {
 background-color: #f3f3f3;
 height: 100%;
@@ -33,7 +33,8 @@ font-family:Helvetica Neue,helvetica,arial,verdana,sans-serif;
   width:30%;
   text-align: center;
   height:100%;
- background:#001a33;
+  background:#001a33;
+  min-height:100%;
 }
 
 #syringeOne {
@@ -357,6 +358,7 @@ text-decoration: none;
 /*IOS TOGGLE*/
 #toggles{
 width:60px;
+float:left;
 }
 .ios-toggle,.ios-toggle:active{
 position:absolute;
