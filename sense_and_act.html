@@ -13,7 +13,7 @@ margin: 0;
 outline:none;
 font-family:Helvetica Neue,helvetica,arial,verdana,sans-serif;
 }
-@media (min-width: 725px){
+@media only screen and (min-width: 725px){
 #sensor{
  float:left;
  text-align: center;
@@ -511,7 +511,8 @@ left: 137px;
      -o-transform: rotate(49deg);
         transform: rotate(49deg);
 }
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+	}
+@media only screen and (max-device-width : 724px) {
 #sensor {
     text-align: center;
     overflow-x: hidden;
