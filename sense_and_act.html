@@ -19,8 +19,11 @@ font-family:Helvetica Neue,helvetica,arial,verdana,sans-serif;
  -webkit-transform: scale(1.3); /* Chrome, Safari, Opera */
  transform: scale(1.3);
 }
-
-#syringeOne, #syringeTwo {
+#syringeOne, #syringeTwo{
+  text-align:center;
+}
+	
+#syringeOne .items, #syringeTwo .items{
   height: 232px;
   margin: 30px auto;
   position: relative;
@@ -30,7 +33,7 @@ font-family:Helvetica Neue,helvetica,arial,verdana,sans-serif;
   -webkit-transform: scale(0.5); /* Chrome, Safari, Opera */
 }
 
-#syringeOne div, #syringeTwo div {
+#syringeOne .items div, #syringeTwo .items div {
   position: absolute;
 }
 
@@ -651,7 +654,8 @@ function buttonclick(clickedid){
 </div>
 <div id="actuator">
   <div id="syringeOne">
-  <div class="pushing"></div>
+  <div class="items">
+  <div class="needle"></div>
    <div class="beaker">
     <div class="liquid red">
       <div class="bubble"></div>
@@ -663,11 +667,13 @@ function buttonclick(clickedid){
       <div class="bubble"></div>
     </div>
   </div>
-  <div class="needle"></div>
+  <div class="pushing"></div>
+</div>
 <button id="injred" type="button" class="btnFade btnBlueGreen" onclick="buttonclick(this.id)">Inject LOW</button>
 </div>
   <div id="syringeTwo">
-  <div class="pushing"></div>
+  <div class="items">
+  <div class="needle"></div>
    <div class="beaker">
     <div class="liquid blue">
       <div class="bubble"></div>
@@ -679,7 +685,8 @@ function buttonclick(clickedid){
       <div class="bubble"></div>
     </div>
   </div>
- <div class="needle"></div>
+ <div class="pushing"></div>
+ </div>
  <button id="injblue" type="button" class="btnFade btnBlueGreen" onclick="buttonclick(this.id)">Inject HIGH</button>
 </div>
 </div>
