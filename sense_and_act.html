@@ -539,9 +539,9 @@ function doalert(checkboxElem) {
 	   document.getElementById('prompt').style.visibility = 'visible';
 	   document.getElementById('injred').style.visibility = 'visible';
 	   document.getElementById('injblue').style.visibility = 'visible';
-	   buttonclick('prompt')
+	   buttonclick('prompt');
 	   // how to check if inj = -1 or inj = 1?
-	   buttonclick('injred')
+	   buttonclick('injred');
    }
 }
 </script>
@@ -617,7 +617,7 @@ function doalert(checkboxElem) {
         switch(xmlhttp.status)
         {
           case 200:
-             // alert(xmlhttp.responseText);
+              alert(xmlhttp.responseText);
 		var response = xmlhttp.responseText.split(',');
 		var currentValue = response[0].split(':');
 		var actualValue = response[1].split(':');
