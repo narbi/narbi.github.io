@@ -13,24 +13,7 @@ margin: 0;
 outline:none;
 font-family:Helvetica Neue,helvetica,arial,verdana,sans-serif;
 }
-@media only screen and (min-width: 725px){
-#sensor{
- float:left;
- text-align: center;
- width: 65%;
- margin-top: 15%;
- padding: 2% 0;
- overflow-x: hidden;
-}
-#actuator{
-  float:right;
-  width:30%;
-  text-align: center;
-  height:100%;
-  background:#001a33;
-  min-height:100%;
-}
-}
+
 #sensor .items{
  -ms-transform: scale(1.3); /* IE 9 */
  -webkit-transform: scale(1.3); /* Chrome, Safari, Opera */
@@ -511,20 +494,36 @@ left: 137px;
      -o-transform: rotate(49deg);
         transform: rotate(49deg);
 }
-	}
+@media only screen and (min-width: 725px){
+#sensor{
+ float:left;
+ text-align: center;
+ width: 65%;
+ margin-top: 15%;
+ padding: 2% 0;
+ overflow-x: hidden;
+}
+#actuator{
+  float:right;
+  width:30%;
+  text-align: center;
+  height:100%;
+  background:#001a33;
+  min-height:100%;
+}
+}
 @media only screen and (max-device-width : 724px) {
 #sensor {
     text-align: center;
     overflow-x: hidden;
 }
 #actuator{
-text-align: center;
-height: 20%;
-background: #001a33;
-min-height: 100%;
+ text-align: center;
+ height: 20%;
+ background: #001a33;
+ min-height: 100%;
 }
-
-	} /*mobile view*/
+} /*mobile view*/
 	
 </style>
 </head>
