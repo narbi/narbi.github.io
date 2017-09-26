@@ -539,7 +539,9 @@ function doalert(checkboxElem) {
 	   document.getElementById('prompt').style.visibility = 'visible';
 	   document.getElementById('injred').style.visibility = 'visible';
 	   document.getElementById('injblue').style.visibility = 'visible';
-	
+	   buttonclick('prompt')
+	   // how to check if inj = -1 or inj = 1?
+	   buttonclick('injred')
    }
 }
 </script>
@@ -602,7 +604,7 @@ function doalert(checkboxElem) {
 	
   function buttonclick(clickedid)
   {
-//    alert(clickedid);
+   alert(clickedid);
 
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.open("get", "/"+clickedid);
