@@ -13,6 +13,7 @@ margin: 0;
 outline:none;
 font-family:Helvetica Neue,helvetica,arial,verdana,sans-serif;
 }
+@media (min-width: 725px){
 #sensor{
  float:left;
  text-align: center;
@@ -21,13 +22,6 @@ font-family:Helvetica Neue,helvetica,arial,verdana,sans-serif;
  padding: 2% 0;
  overflow-x: hidden;
 }
-	
-#sensor .items{
- -ms-transform: scale(1.3); /* IE 9 */
- -webkit-transform: scale(1.3); /* Chrome, Safari, Opera */
- transform: scale(1.3);
-}
-	
 #actuator{
   float:right;
   width:30%;
@@ -35,6 +29,12 @@ font-family:Helvetica Neue,helvetica,arial,verdana,sans-serif;
   height:100%;
   background:#001a33;
   min-height:100%;
+}
+}
+#sensor .items{
+ -ms-transform: scale(1.3); /* IE 9 */
+ -webkit-transform: scale(1.3); /* Chrome, Safari, Opera */
+ transform: scale(1.3);
 }
 
 #syringeOne, #syringeTwo {
