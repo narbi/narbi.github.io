@@ -529,8 +529,8 @@ left: 137px;
 </head>
 <body>
 <div id="toggles">
-	<input type="checkbox" name="connect" id="connect"  class="ios-toggle"  onclick="doalert(this)"/>
-	<label for="connect" class="checkbox-label" data-off=" " data-on="automated"></label>	
+	<input type="checkbox" name="connect" id="connect"  class="ios-toggle" />
+	<label for="connect" class="checkbox-label" data-off=" " data-on="automated" onclick="doalert(this)"></label>	
 </div>
 <div id="sensor">
 <div id="heart-big" title="SRDCE">♥</div>
@@ -582,11 +582,12 @@ left: 137px;
 </body>
 <script>
 function doalert(checkboxElem) {
-  if (checkboxElem.checked) {
-alert("checked")
-  } else {
-    alert("notchecked")
-  }
+	alert(checkboxElem)
+	  if ("#connect".checked) {
+	alert("checked")
+	  } else {
+	    alert("notchecked")
+	  }
 }
 		
   function buttonclick(clickedid)
