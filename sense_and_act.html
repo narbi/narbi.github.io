@@ -527,8 +527,8 @@ left: 137px;
 	
 </style>
 <script>
-function buttonclick(clickedid)
-  {
+	
+function buttonclick(clickedid){
    alert(clickedid);
 
     var xmlhttp = new XMLHttpRequest();
@@ -597,21 +597,7 @@ function buttonclick(clickedid)
     xmlhttp.send();
   }
 	
-function doalert(checkboxElem) {
-   //alert(checkboxElem)
-   if (checkboxElem.checked) {
-	//alert("checked")
-	   document.getElementById('prompt').style.visibility = 'hidden';
-	   document.getElementById('injred').style.visibility = 'hidden';
-	   document.getElementById('injblue').style.visibility = 'hidden';
-   } else {
-	//alert("notchecked")
-	   document.getElementById('prompt').style.visibility = 'visible';
-	   document.getElementById('injred').style.visibility = 'visible';
-	   document.getElementById('injblue').style.visibility = 'visible';
-   }
-	
-}
+
 </script>
 </head>
 <body>
