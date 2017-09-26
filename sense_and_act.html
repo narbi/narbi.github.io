@@ -527,6 +527,12 @@ left: 137px;
 	
 </style>
 <script>
+function wait(milliseconds, foo, arg){
+    setTimeout(function () {
+        foo(arg); // will be executed after the specified time
+    }, milliseconds);
+}	
+	
 function doalert(checkboxElem) {
    //alert(checkboxElem)
    if (checkboxElem.checked) {
@@ -534,12 +540,14 @@ function doalert(checkboxElem) {
 	   document.getElementById('prompt').style.visibility = 'hidden';
 	   document.getElementById('injred').style.visibility = 'hidden';
 	   document.getElementById('injblue').style.visibility = 'hidden';
-	   buttonclick('prompt');
+	   //buttonclick('prompt');
+	   wait(5000, buttonclick, prompt);
 	   if (document.getElementById('syringeOne').classList.contains('recommended')){  
-	     buttonclick('injred');
+	     wait(5000, buttonclick, injred);
 	   }
 	   else if (document.getElementById('syringeTwo').classList.contains('recommended')){  
-	     buttonclick('injblue');
+		// buttonclick('injblue');
+	     wait(5000, buttonclick, injblue);
 	   } 
    } else {
 	//alert("notchecked")
