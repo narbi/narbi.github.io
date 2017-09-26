@@ -534,6 +534,13 @@ function doalert(checkboxElem) {
 	   document.getElementById('prompt').style.visibility = 'hidden';
 	   document.getElementById('injred').style.visibility = 'hidden';
 	   document.getElementById('injblue').style.visibility = 'hidden';
+	   buttonclick('prompt');
+	   if (document.getElementById('syringeOne').classList.contains('recommended')){  
+	     buttonclick('injred');
+	   }
+	   else if (document.getElementById('syringeTwo').classList.contains('recommended')){  
+	     buttonclick('injblue');
+	   } 
    } else {
 	//alert("notchecked")
 	   document.getElementById('prompt').style.visibility = 'visible';
@@ -590,7 +597,7 @@ function buttonclick(clickedid){
 			//highlight low/red
 			document.getElementById("syringeOne").classList.add('recommended'); 
 			document.getElementById("syringeTwo").classList.remove('recommended'); 
-		} else{
+		} else {
 			//highlight high/blue
 			document.getElementById("syringeOne").classList.remove('recommended'); 
 			document.getElementById("syringeTwo").classList.add('recommended'); 
