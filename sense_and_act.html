@@ -526,17 +526,6 @@ left: 137px;
 } /*mobile view*/
 	
 </style>
-<script>
-	function doalert(checkboxElem) {
-	alert(checkboxElem)
-	if ("#connect".checked) {
-	alert("checked")
-	} else {
-	alert("notchecked")
-	}
-}
-
-</script>
 </head>
 <body>
 <div id="toggles">
@@ -594,6 +583,16 @@ left: 137px;
 </body>
 <script>
 
+function doalert(checkboxElem) {
+   //alert(checkboxElem)
+	if (checkboxElem.checked) {
+	alert("checked")
+	} else {
+	alert("notchecked")
+	}
+}
+
+	
   function buttonclick(clickedid)
   {
 //    alert(clickedid);
