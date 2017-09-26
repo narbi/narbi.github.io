@@ -529,7 +529,7 @@ left: 137px;
 </head>
 <body>
 <div id="toggles">
-	<input type="checkbox" name="checkbox1" id="checkbox1 connect"  class="ios-toggle" onclick="buttonclick(this.id)"/>
+	<input type="checkbox" name="checkbox1" id="checkbox1 connect"  class="ios-toggle" />
 	<label for="checkbox1" class="checkbox-label" data-off=" " data-on="automated"></label>	
 </div>
 <div id="sensor">
@@ -597,7 +597,28 @@ left: 137px;
         {
           case 200:
             alert(xmlhttp.responseText);
-//            alert("OK");
+        var response = xmlhttp.responseText.split(',');
+       // if (parseInt(response[0])>parseInt(response[1]) && parseInt(response[0])>parseInt(rgb[2])){
+            document.getElementById("heart-big").classList.add('red');
+            document.getElementById("heart-small").classList.add('red');
+            document.getElementById("heart-big").classList.remove('blue');
+            document.getElementById("heart-small").classList.remove('blue');
+            document.getElementById("heart-big").classList.remove('green');
+            document.getElementById("heart-small").classList.remove('green');
+       // } else if (parseInt(response[1])>parseInt(response[0]) && parseInt(response[1])>parseInt(rgb[2])){
+            document.getElementById("heart-big").classList.add('green');
+            document.getElementById("heart-small").classList.add('green');
+            document.getElementById("heart-big").classList.remove('blue');
+            document.getElementById("heart-small").classList.remove('blue');
+            document.getElementById("heart-big").classList.remove('red');
+            document.getElementById("heart-small").classList.remove('red');
+       // }  else if (parseInt(response[2])>parseInt(response[1]) && parseInt(response[2])>parseInt(rgb[0])){
+            document.getElementById("heart-big").classList.add('blue');
+            document.getElementById("heart-small").classList.add('blue');
+            document.getElementById("heart-big").classList.remove('red');
+            document.getElementById("heart-small").classList.remove('red');
+            document.getElementById("heart-big").classList.remove('green');
+            document.getElementById("heart-small").classList.remove('green');
             break;
           case 404:
             alert("Not Found");
