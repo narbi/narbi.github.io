@@ -530,26 +530,10 @@ left: 137px;
   <div class="fade-in"></div>
   <div class="fade-out"></div>
 </div>
-<a href="" title="sense" class="button btnFade btnBlueGreen">Sense</a>
+<button id="prompt" type="button" class="button btnFade btnBlueGreen" onclick="buttonclick(this.id)">Sense</button>
 </div>
 <div id="actuator">
   <div id="syringeOne">
-  <div class="pushing"></div>
-   <div class="beaker">
-    <div class="liquid blue">
-      <div class="bubble"></div>
-      <div class="bubble"></div>
-      <div class="bubble"></div>
-      <div class="bubble"></div>
-      <div class="bubble"></div>
-      <div class="bubble"></div>
-      <div class="bubble"></div>
-    </div>
-  </div>
-  <div class="needle"></div>
-</div>
-<a href="" title="inject high" class="button btnFade btnBlueGreen">Inject HIGH</a>
-  <div id="syringeTwo">
   <div class="pushing"></div>
    <div class="beaker">
     <div class="liquid red">
@@ -562,9 +546,59 @@ left: 137px;
       <div class="bubble"></div>
     </div>
   </div>
+  <div class="needle"></div>
+</div>
+<button id="injred" type="button" class="btnFade btnBlueGreen" onclick="buttonclick(this.id)">Inject LOW</button>
+  <div id="syringeTwo">
+  <div class="pushing"></div>
+   <div class="beaker">
+    <div class="liquid blue">
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+    </div>
+  </div>
  <div class="needle"></div>
 </div>
-<a href="" title="inject low" class="button btnFade btnBlueGreen">Inject LOW</a>
-	</div>
+<button id="injblue" type="button" class="btnFade btnBlueGreen" onclick="buttonclick(this.id)">Inject HIGH</button>
+</div>
 </body>
+	<script>
+  function buttonclick(clickedid)
+  {
+//    alert(clickedid);
+
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.open("get", "/"+clickedid);
+
+    xmlhttp.onreadystatechange = function()
+    {
+      // DONE
+      if (xmlhttp.readyState == 4)
+      {
+        switch(xmlhttp.status)
+        {
+          case 200:
+            alert(xmlhttp.responseText);
+//            alert("OK");
+            break;
+          case 404:
+            alert("Not Found");
+            break;
+          case 500:
+            alert("Internal Server Error");
+            break;
+          default:
+            alert("Unexpected Error. HTTP Status: " + xmlhttp.status);
+        }
+      }
+    };
+
+    xmlhttp.send();
+  }
+</script>
 </html>
