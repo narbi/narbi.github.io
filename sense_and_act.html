@@ -526,11 +526,23 @@ left: 137px;
 } /*mobile view*/
 	
 </style>
+<script>
+	function doalert(checkboxElem) {
+	alert(checkboxElem)
+	if ("#connect".checked) {
+	alert("checked")
+	} else {
+	alert("notchecked")
+	}
+}
+
+</script>
 </head>
 <body>
 <div id="toggles">
-	<input type="checkbox" name="connect" id="connect"  class="ios-toggle" onclick="doalert(this)"/>
-	<label for="connect" class="checkbox-label" data-off=" " data-on="automated" onclick="doalert(this)"></label>	
+<!-- 	<input type="checkbox" name="connect" id="connect"  class="ios-toggle" onclick="doalert(this)"/>
+	<label for="connect" class="checkbox-label" data-off=" " data-on="automated" onclick="doalert(this)"></label>	 -->
+	<input type="checkbox" name="check" id="check"  class="ios-toggle" onclick="doalert(this)"/>
 </div>
 <div id="sensor">
 <div id="heart-big" title="SRDCE">♥</div>
@@ -581,15 +593,7 @@ left: 137px;
 </div>
 </body>
 <script>
-function doalert(checkboxElem) {
-	alert(checkboxElem)
-	  if ("#connect".checked) {
-	alert("checked")
-	  } else {
-	    alert("notchecked")
-	  }
-}
-		
+
   function buttonclick(clickedid)
   {
 //    alert(clickedid);
