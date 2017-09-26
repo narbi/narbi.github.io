@@ -543,64 +543,8 @@ function doalert(checkboxElem) {
 	   // how to check if inj = -1 or inj = 1?
 	   buttonclick('injred');
    }
+	
 }
-</script>
-</head>
-<body>
-<div id="toggles">
-	<input type="checkbox" name="connect" id="connect"  class="ios-toggle" onchange="doalert(this)"/>
-	<label for="connect" class="checkbox-label" data-off=" " data-on="automated" onchange="doalert(this)"></label>	
-<!-- 	<input type="checkbox" name="check" id="check"  class="ios-toggle" onchange="doalert(this)"/> -->
-</div>
-<div id="sensor">
-<div id="heart-big" title="SRDCE">♥</div>
-<div id="heart-small" title="SRDCE">♥</div>
-<div class="heart-rate">
-  <svg version="1.0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="150px" height="73px" viewBox="0 0 150 73" enable-background="new 0 0 150 73" xml:space="preserve">
-    <polyline fill="none" stroke="#009B9E" stroke-width="3" stroke-miterlimit="10" points="0,45.486 38.514,45.486 44.595,33.324 50.676,45.486 57.771,45.486 62.838,55.622 71.959,9 80.067,63.729 84.122,45.486 97.297,45.486 103.379,40.419 110.473,45.486 150,45.486"
-    />
-  </svg>
-  <div class="fade-in"></div>
-  <div class="fade-out"></div>
-</div>
-<button id="prompt" type="button" class="button btnFade btnBlueGreen" onclick="buttonclick(this.id)">Sense</button>
-</div>
-<div id="actuator">
-  <div id="syringeOne">
-  <div class="pushing"></div>
-   <div class="beaker">
-    <div class="liquid red">
-      <div class="bubble"></div>
-      <div class="bubble"></div>
-      <div class="bubble"></div>
-      <div class="bubble"></div>
-      <div class="bubble"></div>
-      <div class="bubble"></div>
-      <div class="bubble"></div>
-    </div>
-  </div>
-  <div class="needle"></div>
-</div>
-<button id="injred" type="button" class="btnFade btnBlueGreen" onclick="buttonclick(this.id)">Inject LOW</button>
-  <div id="syringeTwo">
-  <div class="pushing"></div>
-   <div class="beaker">
-    <div class="liquid blue">
-      <div class="bubble"></div>
-      <div class="bubble"></div>
-      <div class="bubble"></div>
-      <div class="bubble"></div>
-      <div class="bubble"></div>
-      <div class="bubble"></div>
-      <div class="bubble"></div>
-    </div>
-  </div>
- <div class="needle"></div>
-</div>
-<button id="injblue" type="button" class="btnFade btnBlueGreen" onclick="buttonclick(this.id)">Inject HIGH</button>
-</div>
-</body>
-<script>
 	
   function buttonclick(clickedid)
   {
@@ -672,4 +616,58 @@ function doalert(checkboxElem) {
     xmlhttp.send();
   }
 </script>
+</head>
+<body>
+<div id="toggles">
+	<input type="checkbox" name="connect" id="connect"  class="ios-toggle" onchange="doalert(this)"/>
+	<label for="connect" class="checkbox-label" data-off=" " data-on="automated" onchange="doalert(this)"></label>	
+</div>
+<div id="sensor">
+<div id="heart-big" title="SRDCE">♥</div>
+<div id="heart-small" title="SRDCE">♥</div>
+<div class="heart-rate">
+  <svg version="1.0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="150px" height="73px" viewBox="0 0 150 73" enable-background="new 0 0 150 73" xml:space="preserve">
+    <polyline fill="none" stroke="#009B9E" stroke-width="3" stroke-miterlimit="10" points="0,45.486 38.514,45.486 44.595,33.324 50.676,45.486 57.771,45.486 62.838,55.622 71.959,9 80.067,63.729 84.122,45.486 97.297,45.486 103.379,40.419 110.473,45.486 150,45.486"
+    />
+  </svg>
+  <div class="fade-in"></div>
+  <div class="fade-out"></div>
+</div>
+<button id="prompt" type="button" class="button btnFade btnBlueGreen" onclick="buttonclick(this.id)">Sense</button>
+</div>
+<div id="actuator">
+  <div id="syringeOne">
+  <div class="pushing"></div>
+   <div class="beaker">
+    <div class="liquid red">
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+    </div>
+  </div>
+  <div class="needle"></div>
+</div>
+<button id="injred" type="button" class="btnFade btnBlueGreen" onclick="buttonclick(this.id)">Inject LOW</button>
+  <div id="syringeTwo">
+  <div class="pushing"></div>
+   <div class="beaker">
+    <div class="liquid blue">
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+    </div>
+  </div>
+ <div class="needle"></div>
+</div>
+<button id="injblue" type="button" class="btnFade btnBlueGreen" onclick="buttonclick(this.id)">Inject HIGH</button>
+</div>
+</body>
 </html>
