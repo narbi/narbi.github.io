@@ -529,7 +529,7 @@ left: 137px;
 </head>
 <body>
 <div id="toggles">
-	<input type="checkbox" name="connect" id="connect"  class="ios-toggle" />
+	<input type="checkbox" name="connect" id="connect"  class="ios-toggle" onchange="checkboxStatus(this)"/>
 	<label for="connect" class="checkbox-label" data-off=" " data-on="automated"></label>	
 </div>
 <div id="sensor">
@@ -580,7 +580,17 @@ left: 137px;
 <button id="injblue" type="button" class="btnFade btnBlueGreen" onclick="buttonclick(this.id)">Inject HIGH</button>
 </div>
 </body>
-	<script>
+<script>
+		
+		
+  function checkboxStatus(checkboxElem) {
+	  if (checkboxElem.checked) {
+	    alert ("assisted");
+	  } else {
+	    alert ("automated");
+	  }
+}
+		
   function buttonclick(clickedid)
   {
 //    alert(clickedid);
