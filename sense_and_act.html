@@ -596,29 +596,45 @@ left: 137px;
         switch(xmlhttp.status)
         {
           case 200:
-            alert(xmlhttp.responseText);
-        var response = xmlhttp.responseText.split(',');
-       // if (parseInt(response[0])>parseInt(response[1]) && parseInt(response[0])>parseInt(rgb[2])){
-            document.getElementById("heart-big").classList.add('red');
-            document.getElementById("heart-small").classList.add('red');
-            document.getElementById("heart-big").classList.remove('blue');
-            document.getElementById("heart-small").classList.remove('blue');
-            document.getElementById("heart-big").classList.remove('green');
-            document.getElementById("heart-small").classList.remove('green');
-       // } else if (parseInt(response[1])>parseInt(response[0]) && parseInt(response[1])>parseInt(rgb[2])){
-            document.getElementById("heart-big").classList.add('green');
-            document.getElementById("heart-small").classList.add('green');
-            document.getElementById("heart-big").classList.remove('blue');
-            document.getElementById("heart-small").classList.remove('blue');
-            document.getElementById("heart-big").classList.remove('red');
-            document.getElementById("heart-small").classList.remove('red');
-       // }  else if (parseInt(response[2])>parseInt(response[1]) && parseInt(response[2])>parseInt(rgb[0])){
-            document.getElementById("heart-big").classList.add('blue');
-            document.getElementById("heart-small").classList.add('blue');
-            document.getElementById("heart-big").classList.remove('red');
-            document.getElementById("heart-small").classList.remove('red');
-            document.getElementById("heart-big").classList.remove('green');
-            document.getElementById("heart-small").classList.remove('green');
+             // alert(xmlhttp.responseText);
+		var response = xmlhttp.responseText.split(',');
+		var currentValue = response[0].split(':');
+		var actualValue = response[1].split(':');
+		var injValue = response[2].split(':');
+		var postValue = response[3].split(':');
+		if (parseInt(currentValue[1])<0){ //heart is red
+		    document.getElementById("heart-big").classList.add('red');
+		    document.getElementById("heart-small").classList.add('red');
+		    document.getElementById("heart-big").classList.remove('blue');
+		    document.getElementById("heart-small").classList.remove('blue');
+		    document.getElementById("heart-big").classList.remove('green');
+		    document.getElementById("heart-small").classList.remove('green');
+		} else if (parseInt(currentValue[1])>0){ //heart is blue
+		    document.getElementById("heart-big").classList.add('blue');
+		    document.getElementById("heart-small").classList.add('blue');
+		    document.getElementById("heart-big").classList.remove('red');
+		    document.getElementById("heart-small").classList.remove('red');
+		    document.getElementById("heart-big").classList.remove('green');
+		    document.getElementById("heart-small").classList.remove('green');
+		} else{ //heart is green - NORMAL
+		    document.getElementById("heart-big").classList.add('green');
+		    document.getElementById("heart-small").classList.add('green');
+		    document.getElementById("heart-big").classList.remove('blue');
+		    document.getElementById("heart-small").classList.remove('blue');
+		    document.getElementById("heart-big").classList.remove('red');
+		    document.getElementById("heart-small").classList.remove('red');
+		}
+
+		if parseInt(injValue[1])>0){
+			//highlight low/red
+			document.getElementById("syringeOne").classList.add('recommended'); 
+			document.getElementById("syringeTwo").classList.remove('recommended'); 
+		} else{
+			//highlight high/blue
+			document.getElementById("syringeOne").classList.remove('recommended'); 
+			document.getElementById("syringeTwo").classList.add('recommended'); 
+		}
+			
             break;
           case 404:
             alert("Not Found");
