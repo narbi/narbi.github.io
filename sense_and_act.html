@@ -541,13 +541,13 @@ function doalert(checkboxElem) {
 	   document.getElementById('injred').style.visibility = 'hidden';
 	   document.getElementById('injblue').style.visibility = 'hidden';
 	   //buttonclick('prompt');
-	   wait(5000, buttonclick, prompt);
+	   wait(5000, buttonclick, 'prompt');
 	   if (document.getElementById('syringeOne').classList.contains('recommended')){  
 	     wait(5000, buttonclick, injred);
 	   }
 	   else if (document.getElementById('syringeTwo').classList.contains('recommended')){  
 		// buttonclick('injblue');
-	     wait(5000, buttonclick, injblue);
+	     wait(5000, buttonclick, 'injblue');
 	   } 
    } else {
 	//alert("notchecked")
