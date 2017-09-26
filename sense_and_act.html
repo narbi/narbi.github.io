@@ -527,26 +527,7 @@ left: 137px;
 	
 </style>
 <script>
-function doalert(checkboxElem) {
-   //alert(checkboxElem)
-   if (checkboxElem.checked) {
-	//alert("checked")
-	   document.getElementById('prompt').style.visibility = 'hidden';
-	   document.getElementById('injred').style.visibility = 'hidden';
-	   document.getElementById('injblue').style.visibility = 'hidden';
-   } else {
-	//alert("notchecked")
-	   document.getElementById('prompt').style.visibility = 'visible';
-	   document.getElementById('injred').style.visibility = 'visible';
-	   document.getElementById('injblue').style.visibility = 'visible';
-	   buttonclick('prompt');
-	   // how to check if inj = -1 or inj = 1?
-	   buttonclick('injred');
-   }
-	
-}
-	
-  function buttonclick(clickedid)
+function buttonclick(clickedid)
   {
    alert(clickedid);
 
@@ -615,6 +596,22 @@ function doalert(checkboxElem) {
 
     xmlhttp.send();
   }
+	
+function doalert(checkboxElem) {
+   //alert(checkboxElem)
+   if (checkboxElem.checked) {
+	//alert("checked")
+	   document.getElementById('prompt').style.visibility = 'hidden';
+	   document.getElementById('injred').style.visibility = 'hidden';
+	   document.getElementById('injblue').style.visibility = 'hidden';
+   } else {
+	//alert("notchecked")
+	   document.getElementById('prompt').style.visibility = 'visible';
+	   document.getElementById('injred').style.visibility = 'visible';
+	   document.getElementById('injblue').style.visibility = 'visible';
+   }
+	
+}
 </script>
 </head>
 <body>
