@@ -562,13 +562,8 @@ function doalert(checkboxElem) {
 	   document.getElementById('injred').style.visibility = 'hidden';
 	   document.getElementById('injblue').style.visibility = 'hidden';
 	   //buttonclick('prompt');
-	   wait(5000, buttonclick, 'prompt');
-	   if (document.getElementById('syringeOne').classList.contains('recommended')){  
-	     wait(5000, buttonclick, injred);
-	   }
-	   else if (document.getElementById('syringeTwo').classList.contains('recommended')){  
-		// buttonclick('injblue');
-	     wait(5000, buttonclick, 'injblue');
+	   wait(4000, buttonclick, 'prompt');
+	   wait(7000, injectColor, ' ');
 	   } 
    } else {
 	//alert("notchecked")
@@ -578,9 +573,18 @@ function doalert(checkboxElem) {
    }
 	
 }
+
+function injectColor(color){
+	   if (document.getElementById('syringeOne').classList.contains('recommended')){  
+	     wait(2000, buttonclick, 'injred');
+	   }
+	   else if (document.getElementById('syringeTwo').classList.contains('recommended')){  
+		// buttonclick('injblue');
+	     wait(2000, buttonclick, 'injblue');
+}
 	
 function buttonclick(clickedid){
-   alert(clickedid);
+   //alert(clickedid);
 
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.open("get", "/"+clickedid);
@@ -593,7 +597,7 @@ function buttonclick(clickedid){
         switch(xmlhttp.status)
         {
           case 200:
-              alert(xmlhttp.responseText);
+                console.log(xmlhttp.responseText);
 		var response = xmlhttp.responseText.split(',');
 		var currentValue = response[0].split(':');
 		var actualValue = response[1].split(':');
