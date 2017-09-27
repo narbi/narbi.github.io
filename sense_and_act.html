@@ -631,6 +631,30 @@ function buttonclick(clickedid){
 			document.getElementById("syringeOne").classList.remove('recommended'); 
 			document.getElementById("syringeTwo").classList.add('recommended'); 
 		}
+			
+		if (parseInt(injValue[1])+parseInt(currentValue[1]) = 0){
+		    document.getElementById("heart-big").classList.add('green');
+		    document.getElementById("heart-small").classList.add('green');
+		    document.getElementById("heart-big").classList.remove('blue');
+		    document.getElementById("heart-small").classList.remove('blue');
+		    document.getElementById("heart-big").classList.remove('red');
+		    document.getElementById("heart-small").classList.remove('red');
+		} else if (parseInt(injValue[1])+parseInt(currentValue[1]) > 0){
+		    document.getElementById("heart-big").classList.add('blue');
+		    document.getElementById("heart-small").classList.add('blue');
+		    document.getElementById("heart-big").classList.remove('red');
+		    document.getElementById("heart-small").classList.remove('red');
+		    document.getElementById("heart-big").classList.remove('green');
+		    document.getElementById("heart-small").classList.remove('green');
+		} else if (parseInt(injValue[1])+parseInt(currentValue[1]) < 0){
+		    document.getElementById("heart-big").classList.add('red');
+		    document.getElementById("heart-small").classList.add('red');
+		    document.getElementById("heart-big").classList.remove('blue');
+		    document.getElementById("heart-small").classList.remove('blue');
+		    document.getElementById("heart-big").classList.remove('green');
+		    document.getElementById("heart-small").classList.remove('green');
+		}
+			
             break;
           case 404:
             alert("Not Found");
