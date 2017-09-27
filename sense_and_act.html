@@ -365,6 +365,8 @@ cursor:pointer;
 
 /*IOS TOGGLE*/
 #toggles{
+margin-top:3px;
+margin-left:3px;
 width:60px;
 float:left;
 }
@@ -557,6 +559,8 @@ min-height: 20%;
     -webkit-transform: scale(0.3);
     text-align: center;
 }
+.needle{top: 148px;}
+.needlecap{top: 159px;}
 } /*mobile view*/
 	
 </style>
@@ -589,6 +593,7 @@ function doalert(checkboxElem) {
 }
 
 function changeHeartColor(color){
+	alert('trying to change color of the heart again'+color);
 		if (parseInt(color)<0){ //heart is red
 		    document.getElementById("heart-big").classList.add('red');
 		    document.getElementById("heart-small").classList.add('red');
@@ -629,7 +634,7 @@ function buttonclick(clickedid){
           
 	  console.log(clickedid);
 	  console.log(xmlhttp.responseText);
-	  if (clickedid == 'prompt') || (clickedid == 'connect'){
+	  if ((clickedid == 'prompt') || (clickedid == 'connect')){
 		var response = xmlhttp.responseText.split(',');
 		var currentValue = response[0].split(':');
 		var actualValue = response[1].split(':');
