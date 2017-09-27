@@ -68,14 +68,39 @@ font-family:Helvetica Neue,helvetica,arial,verdana,sans-serif;
 }
   
 .beaker:after {
+width: 61px;
+height: 105px;
+border-top: 12px solid white;
+border-bottom: 10px solid white;
+top: -40px;
+left: 137px;
+}
+	
+.needlecap{
+width: 16px;
+height: 16px;
+background: white;
+top: 188px;
+left: -43px;
+-webkit-transform: rotate(49deg);
+   -moz-transform: rotate(49deg);
+    -ms-transform: rotate(49deg);
+     -o-transform: rotate(49deg);
+        transform: rotate(49deg);
+}
+.needle{
 border: 3px solid #FFF;
 content: '';
 height: 88px;
 position: absolute;
 top: 205px;
 right: 30px;
+-webkit-transform: rotate(49deg);
+   -moz-transform: rotate(49deg);
+    -ms-transform: rotate(49deg);
+     -o-transform: rotate(49deg);
+        transform: rotate(49deg);
 }
-
 .liquid {
   bottom: 0;
   height: 170px;
@@ -479,33 +504,7 @@ color:#1fc1c8;
 #heart-big.green:before,#heart-big.green:after{background:green;}
 #heart-big.blue:before,#heart-big.blue:after{background:blue;}
 
-	
-/*ADDED*/
-.needle{
-width: 16px;
-height: 16px;
-background: white;
-top: 188px;
-left: -43px;
--webkit-transform: rotate(49deg);
-   -moz-transform: rotate(49deg);
-    -ms-transform: rotate(49deg);
-     -o-transform: rotate(49deg);
-        transform: rotate(49deg);
-}
-.pushing{
-width: 61px;
-height: 105px;
-border-top: 12px solid white;
-border-bottom: 10px solid white;
-top: -40px;
-left: 137px;
--webkit-transform: rotate(49deg);
-   -moz-transform: rotate(49deg);
-    -ms-transform: rotate(49deg);
-     -o-transform: rotate(49deg);
-        transform: rotate(49deg);
-}
+/*MOBILE VIEW*/
 @media only screen and (min-width: 725px){
 #sensor{
  float:left;
@@ -706,7 +705,7 @@ function buttonclick(clickedid){
 <div id="actuator">
   <div id="syringeOne">
   <div class="items">
-  <div class="needle"></div>
+  <div class="needlecap"></div>
    <div class="beaker">
     <div class="liquid red">
       <div class="bubble"></div>
@@ -718,13 +717,13 @@ function buttonclick(clickedid){
       <div class="bubble"></div>
     </div>
   </div>
-  <div class="pushing"></div>
+  <div class="needle"></div>
 </div>
 <button id="injred" type="button" class="btnFade btnBlueGreen" onclick="buttonclick(this.id)">Inject LOW</button>
 </div>
   <div id="syringeTwo">
   <div class="items">
-  <div class="needle"></div>
+  <div class="needlecap"></div>
    <div class="beaker">
     <div class="liquid blue">
       <div class="bubble"></div>
@@ -736,7 +735,7 @@ function buttonclick(clickedid){
       <div class="bubble"></div>
     </div>
   </div>
- <div class="pushing"></div>
+ <div class="needle"></div>
  </div>
  <button id="injblue" type="button" class="btnFade btnBlueGreen" onclick="buttonclick(this.id)">Inject HIGH</button>
 </div>
