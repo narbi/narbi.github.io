@@ -608,7 +608,7 @@ function changeHeartColor(color){
 		    document.getElementById("heart-small").classList.remove('red');
 		    document.getElementById("heart-big").classList.remove('green');
 		    document.getElementById("heart-small").classList.remove('green');
-		} else if (parseInt(color)=0){ //heart is green - NORMAL
+		} else if (parseInt(color)==0){ //heart is green - NORMAL
 		    document.getElementById("heart-big").classList.add('green');
 		    document.getElementById("heart-small").classList.add('green');
 		    document.getElementById("heart-big").classList.remove('blue');
@@ -704,11 +704,11 @@ function buttonclick(clickedid){
 </script>
 </head>
 <body>
-<div id="sensor">
 <div id="toggles">
 	<input type="checkbox" name="connect" id="connect"  class="ios-toggle" onchange="doalert(this)"/>
 	<label for="connect" class="checkbox-label" data-off=" " data-on="automated" onchange="doalert(this)"></label>	
 </div>
+<div id="sensor">
 <div id="heart-big" title="SRDCE">♥</div>
 <div id="heart-small" title="SRDCE">♥</div>
 <div class="heart-rate">
