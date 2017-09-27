@@ -368,7 +368,7 @@ cursor:pointer;
 margin-top:3px;
 margin-left:3px;
 width:60px;
-float:left;
+float:right;
 }
 .ios-toggle,.ios-toggle:active{
 position:absolute;
@@ -551,7 +551,7 @@ min-height: 20%;
     width: 49%;
 }
 #syringeOne .items, #syringeTwo .items {
-    height: 200px;
+    height: 160px;
     position: relative;
     width: 50vw;
     transform: scale(0.3);
@@ -559,8 +559,8 @@ min-height: 20%;
     -webkit-transform: scale(0.3);
     text-align: center;
 }
-.needle{top: 148px;}
-.needlecap{top: 159px;}
+.needle{top: 114px;}
+.needlecap{top: 118px;}
 } /*mobile view*/
 	
 </style>
@@ -704,11 +704,11 @@ function buttonclick(clickedid){
 </script>
 </head>
 <body>
+<div id="sensor">
 <div id="toggles">
 	<input type="checkbox" name="connect" id="connect"  class="ios-toggle" onchange="doalert(this)"/>
 	<label for="connect" class="checkbox-label" data-off=" " data-on="automated" onchange="doalert(this)"></label>	
 </div>
-<div id="sensor">
 <div id="heart-big" title="SRDCE">♥</div>
 <div id="heart-small" title="SRDCE">♥</div>
 <div class="heart-rate">
