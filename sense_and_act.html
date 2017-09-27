@@ -36,7 +36,14 @@ font-family:Helvetica Neue,helvetica,arial,verdana,sans-serif;
 #syringeOne .items div, #syringeTwo .items div {
   position: absolute;
 }
-
+#syringeOne.recommended .beaker,
+#syringeTwo.recommended .beaker,
+#syringeOne.recommended .beaker:after,
+#syringeTwo.recommended .beaker:after,
+#syringeOne.recommended .needle,
+#syringeTwo.recommended .needle{
+	box-shadow:1px 0px 10px white;
+}
 .beaker {
   border: 10px solid #FFF;
   border-radius: 0 0 30px 30px;
@@ -474,7 +481,7 @@ color:#1fc1c8;
 
 	
 /*ADDED*/
-.pushing{
+.needle{
 width: 16px;
 height: 16px;
 background: white;
@@ -486,7 +493,7 @@ left: -43px;
      -o-transform: rotate(49deg);
         transform: rotate(49deg);
 }
-.needle{
+.pushing{
 width: 61px;
 height: 105px;
 border-top: 12px solid white;
