@@ -591,8 +591,8 @@ function injectColor(color){
 	   else if (document.getElementById('syringeTwo').classList.contains('recommended')){  
 		// buttonclick('injblue');
 	     wait(2000, buttonclick, 'injblue');
-	   
-	   wait(7000, changeHeartColor, postColor);
+	   }
+	   wait(4000, changeHeartColor, postColor);
 }
 function changeHeartColor(color){
 		if (parseInt(color)<0){ //heart is red
