@@ -664,10 +664,13 @@ function buttonclick(clickedid){
 			//highlight low/red
 			document.getElementById("syringeOne").classList.add('recommended'); 
 			document.getElementById("syringeTwo").classList.remove('recommended'); 
-		} else {
+		} else if (parseInt(injValue[1])<0){
 			//highlight high/blue
 			document.getElementById("syringeOne").classList.remove('recommended'); 
 			document.getElementById("syringeTwo").classList.add('recommended'); 
+		} else{
+			document.getElementById("syringeOne").classList.remove('recommended'); 
+			document.getElementById("syringeTwo").classList.remove('recommended'); 
 		}
 			
 		if (parseInt(injValue[1])+parseInt(currentValue[1]) == 0){
