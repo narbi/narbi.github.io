@@ -644,7 +644,12 @@ function doalert(checkboxElem) {
    }
 	
 }
-
+	
+function removeElement(element){
+		document.getElementById("syringeOne").classList.remove(element);
+		document.getElementById("syringeTwo").classList.remove(element);
+}
+	
 function changeHeartColor(color){
 	console.log('changing again color of the heart to: '+color);
 		if (parseInt(color)<0){ //heart is red
@@ -739,32 +744,19 @@ function buttonclick(clickedid){
 		    document.getElementById("actuator").setAttribute("data-post", "-1");
 		}
 	}	
-	  if (clickedid == 'connect'){	
-		recom = document.getElementsByClassName('recommended'); 
-		console.log(recom.length);
-		recom[0].classList.add('anim');
-		console.log(recom[0]);
-	 	document.getElementById("syringeOne").classList.remove('recommended'); 
-		document.getElementById("syringeTwo").classList.remove('recommended');
-		postColor = document.getElementById("actuator").getAttribute("data-post");
-	   	console.log('postColor '+postColor)
-	   	wait(10000, changeHeartColor, postColor);
-	   	document.getElementById("actuator").removeAttribute("data-post");
-	}
-	 if ((clickedid == 'injblue')||(clickedid == 'injred')){		
+
+	 if ((clickedid == 'injblue')||(clickedid == 'injred')||(clickedid == 'connect')){		
 		recom = document.getElementsByClassName('recommended');  
 		console.log(recom.length);
 		recom[0].classList.add('anim');
 		console.log(recom[0]);
 	 	document.getElementById("syringeOne").classList.remove('recommended'); 
 		document.getElementById("syringeTwo").classList.remove('recommended');
-		recom[0].classList.add('anim');
 		postColor = document.getElementById("actuator").getAttribute("data-post");
 	   	console.log('postColor '+postColor)
 	   	wait(10000, changeHeartColor, postColor);
 	   	document.getElementById("actuator").removeAttribute("data-post");
-		//document.getElementById("syringeOne").classList.remove('anim');
-		//document.getElementById("syringeTwo").classList.remove('anim');
+		wait(10000, removeElement, 'anim');
 	 }		
             break;
           case 404:
