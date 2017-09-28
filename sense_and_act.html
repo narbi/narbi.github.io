@@ -38,7 +38,7 @@ font-family:Helvetica Neue,helvetica,arial,verdana,sans-serif;
 }
 
 .beaker {
-  border: 10px solid #FFF;
+  border: 4px solid #FFF;
   border-radius: 0 0 30px 30px;
   height: 200px;
   left: 14px;
@@ -96,10 +96,10 @@ left: -74px;
      -o-transform: rotate(49deg);
         transform: rotate(49deg);
 }
-#syringeOne.recommended>.beaker,
-#syringeTwo.recommended>.beaker,
-#syringeOne.recommended>.beaker:before,
-#syringeTwo.recommended>.beaker:before,
+#syringeOne.recommended .beaker,
+#syringeTwo.recommended .beaker,
+#syringeOne.recommended .beaker:before,
+#syringeTwo.recommended .beaker:before,
 #syringeOne.recommended .needle,
 #syringeTwo.recommended .needle,
 #syringeOne.recommended .needlecap,
@@ -702,9 +702,13 @@ function buttonclick(clickedid){
 	if (clickedid == 'prompt'){
 	   var postColor = document.getElementById("actuator").getAttribute("data-post");
 	   console.log('postColor '+postColor)
-	   wait(4000, changeHeartColor, postColor);
+	   wait(6000, changeHeartColor, postColor);
 	   document.getElementById("actuator").removeAttribute("data-post");
 	 }
+	 if ((clickedid == 'injblue')||(clickedid == 'injred')){		
+	 	document.getElementById("syringeOne").classList.remove('recommended'); 
+		document.getElementById("syringeTwo").classList.remove('recommended'); 
+	 }		
             break;
           case 404:
             alert("Not Found");
