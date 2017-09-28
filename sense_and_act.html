@@ -227,17 +227,17 @@ left: -74px;
 
 #syringeOne.anim .liquid,
 #syringeTwo.anim .liquid{
--webkit-animation: pour 3s linear;
+-webkit-animation: pour 8s linear;
 	
 }
 #syringeOne.anim .beaker:before,
 #syringeTwo.anim .beaker:before{
--webkit-animation: push 3s linear;
+-webkit-animation: push 8s linear;
 }
 	
 #syringeOne.anim .beaker:after,
 #syringeTwo.anim .beaker:after{
--webkit-animation: pushing 3s linear;
+-webkit-animation: pushing 8s linear;
 }
 
 @-webkit-keyframes pour {
@@ -250,7 +250,7 @@ left: -74px;
 }
 @-webkit-keyframes push {
   50% {
-    top: -44px;
+    top: -43px;
   }
   100% {
     top: 0px ;
@@ -694,6 +694,7 @@ function buttonclick(clickedid){
 		var injValue = response[2].split(':');
 		var postValue = response[3].split(':');
 		var postColor;
+		var recom;
 		if (parseInt(currentValue[1])<0){ //heart is red
 		    document.getElementById("heart-big").classList.add('red');
 		    document.getElementById("heart-small").classList.add('red');
@@ -739,20 +740,28 @@ function buttonclick(clickedid){
 		}
 	}	
 	  if (clickedid == 'connect'){	
-	      	document.getElementById("syringeOne").classList.remove('recommended'); 
-		document.getElementById("syringeTwo").classList.remove('recommended'); 
-		postColor = document.getElementById("actuator").getAttribute("data-post");
-	   	console.log('postColor '+postColor)
-	   	wait(9000, changeHeartColor, postColor);
-	   	document.getElementById("actuator").removeAttribute("data-post");
-	}
-	 if ((clickedid == 'injblue')||(clickedid == 'injred')){		
+		recom = document.getElementsByClassName('recommended'); 
+		recom.classList.add('anim');
 	 	document.getElementById("syringeOne").classList.remove('recommended'); 
-		document.getElementById("syringeTwo").classList.remove('recommended'); 
+		document.getElementById("syringeTwo").classList.remove('recommended');
 		postColor = document.getElementById("actuator").getAttribute("data-post");
 	   	console.log('postColor '+postColor)
 	   	wait(10000, changeHeartColor, postColor);
 	   	document.getElementById("actuator").removeAttribute("data-post");
+		document.getElementById("syringeOne").classList.remove('anim');
+		document.getElementById("syringeTwo").classList.remove('anim');
+	}
+	 if ((clickedid == 'injblue')||(clickedid == 'injred')){		
+		recom = document.getElementsByClassName('recommended');  
+	 	document.getElementById("syringeOne").classList.remove('recommended'); 
+		document.getElementById("syringeTwo").classList.remove('recommended');
+		recom.classList.add('anim');
+		postColor = document.getElementById("actuator").getAttribute("data-post");
+	   	console.log('postColor '+postColor)
+	   	wait(10000, changeHeartColor, postColor);
+	   	document.getElementById("actuator").removeAttribute("data-post");
+		document.getElementById("syringeOne").classList.remove('anim');
+		document.getElementById("syringeTwo").classList.remove('anim');
 	 }		
             break;
           case 404:
