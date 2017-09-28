@@ -741,7 +741,9 @@ function buttonclick(clickedid){
 	}	
 	  if (clickedid == 'connect'){	
 		recom = document.getElementsByClassName('recommended'); 
-		recom.classList.add('anim');
+		console.log(recom.length);
+		recom[0].classList.add('anim');
+		console.log(recom[0]);
 	 	document.getElementById("syringeOne").classList.remove('recommended'); 
 		document.getElementById("syringeTwo").classList.remove('recommended');
 		postColor = document.getElementById("actuator").getAttribute("data-post");
@@ -751,9 +753,12 @@ function buttonclick(clickedid){
 	}
 	 if ((clickedid == 'injblue')||(clickedid == 'injred')){		
 		recom = document.getElementsByClassName('recommended');  
+		console.log(recom.length);
+		recom[0].classList.add('anim');
+		console.log(recom[0]);
 	 	document.getElementById("syringeOne").classList.remove('recommended'); 
 		document.getElementById("syringeTwo").classList.remove('recommended');
-		recom.classList.add('anim');
+		recom[0].classList.add('anim');
 		postColor = document.getElementById("actuator").getAttribute("data-post");
 	   	console.log('postColor '+postColor)
 	   	wait(10000, changeHeartColor, postColor);
