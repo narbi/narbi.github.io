@@ -702,7 +702,7 @@ function buttonclick(clickedid){
 		document.getElementById("syringeTwo").classList.remove('recommended'); 
 		postColor = document.getElementById("actuator").getAttribute("data-post");
 	   	console.log('postColor '+postColor)
-	   	wait(2000, changeHeartColor, postColor);
+	   	wait(9000, changeHeartColor, postColor);
 	   	document.getElementById("actuator").removeAttribute("data-post");
 	}
 	 if ((clickedid == 'injblue')||(clickedid == 'injred')){		
