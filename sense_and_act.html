@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">	
 <style>
 html, body{height:100%;}
@@ -594,10 +595,6 @@ function doalert(checkboxElem) {
 	   document.getElementById('injred').style.visibility = 'hidden';
 	   document.getElementById('injblue').style.visibility = 'hidden';
 	   wait(100, buttonclick, 'connect');
-	   var postColor = document.getElementById("actuator").getAttribute("data-post");
-	   console.log('postColor '+postColor)
-	   wait(2000, changeHeartColor, postColor);
-	   document.getElementById("actuator").removeAttribute("data-post");
     } else {
 	   //alert("notchecked")
 	   document.getElementById('prompt').style.visibility = 'visible';
@@ -655,6 +652,7 @@ function buttonclick(clickedid){
 		var actualValue = response[1].split(':');
 		var injValue = response[2].split(':');
 		var postValue = response[3].split(':');
+		var postColor;
 		if (parseInt(currentValue[1])<0){ //heart is red
 		    document.getElementById("heart-big").classList.add('red');
 		    document.getElementById("heart-small").classList.add('red');
@@ -699,13 +697,20 @@ function buttonclick(clickedid){
 		    document.getElementById("actuator").setAttribute("data-post", "-1");
 		}
 	}	
-			
+	  if ((clickedid == 'connect'){	
+	      	document.getElementById("syringeOne").classList.remove('recommended'); 
+		document.getElementById("syringeTwo").classList.remove('recommended'); 
+		postColor = document.getElementById("actuator").getAttribute("data-post");
+	   	console.log('postColor '+postColor)
+	   	wait(2000, changeHeartColor, postColor);
+	   	document.getElementById("actuator").removeAttribute("data-post");
+	}
 	 if ((clickedid == 'injblue')||(clickedid == 'injred')){		
 	 	document.getElementById("syringeOne").classList.remove('recommended'); 
 		document.getElementById("syringeTwo").classList.remove('recommended'); 
-		var postColor = document.getElementById("actuator").getAttribute("data-post");
+		postColor = document.getElementById("actuator").getAttribute("data-post");
 	   	console.log('postColor '+postColor)
-	   	wait(9000, changeHeartColor, postColor);
+	   	wait(10000, changeHeartColor, postColor);
 	   	document.getElementById("actuator").removeAttribute("data-post");
 	 }		
             break;
