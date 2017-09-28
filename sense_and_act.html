@@ -699,15 +699,14 @@ function buttonclick(clickedid){
 		    document.getElementById("actuator").setAttribute("data-post", "-1");
 		}
 	}	
-	if (clickedid == 'prompt'){
-	   var postColor = document.getElementById("actuator").getAttribute("data-post");
-	   console.log('postColor '+postColor)
-	   wait(6000, changeHeartColor, postColor);
-	   document.getElementById("actuator").removeAttribute("data-post");
-	 }
+			
 	 if ((clickedid == 'injblue')||(clickedid == 'injred')){		
 	 	document.getElementById("syringeOne").classList.remove('recommended'); 
 		document.getElementById("syringeTwo").classList.remove('recommended'); 
+		var postColor = document.getElementById("actuator").getAttribute("data-post");
+	   	console.log('postColor '+postColor)
+	   	wait(6000, changeHeartColor, postColor);
+	   	document.getElementById("actuator").removeAttribute("data-post");
 	 }		
             break;
           case 404:
