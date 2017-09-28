@@ -224,6 +224,56 @@ left: -74px;
   -webkit-animation-duration: 700ms;
   -webkit-transform: scale(1.3);
 }
+
+#syringeOne.anim .liquid,
+#syringeTwo.anim .liquid{
+transition: pour 2s linear;
+	
+}
+#syringeOne.anim .beaker:before,
+#syringeTwo.anim .beaker:before{
+transition: push 2s linear;	
+}
+	
+#syringeOne.anim .beaker:after,
+#syringeTwo.anim .beaker:after{
+transition: pushing 2s linear;
+}
+
+@-webkit-keyframes pour {
+  0% {
+    height: 170px;
+  }
+  50% {
+    height: 111px;
+  }
+  100% {
+    height: 10px ;
+  }
+}
+@-webkit-keyframes push {
+  0% {
+    top: -110px;
+  }
+  50% {
+    top: -47px;
+  }
+  100% {
+    top: 0px ;
+  }
+}
+@-webkit-keyframes pushing {
+  0% {
+    top: -102px;
+  }
+  50% {
+    top: -51px;
+  }
+  100% {
+    top: 0px ;
+  }
+}
+	
 /*HEART*/
  #heart-small { display: inline-block; width: 100px; height: 90px; margin-left: -96px; position: relative; top: 11px; text-indent: -9999px; overflow: hidden; }
 
