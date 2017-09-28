@@ -36,29 +36,7 @@ font-family:Helvetica Neue,helvetica,arial,verdana,sans-serif;
 #syringeOne .items div, #syringeTwo .items div {
   position: absolute;
 }
-#syringeOne.recommended .beaker,
-#syringeTwo.recommended .beaker,
-#syringeOne.recommended .beaker:before,
-#syringeTwo.recommended .beaker:beofre,
-#syringeOne.recommended .needle,
-#syringeTwo.recommended .needlecap,
-#syringeOne.recommended .needlecap,
-#syringeTwo.recommended .needle{
-    -webkit-animation: blink 1.0s linear infinite;
-    animation: blink 1.0s linear infinite;
-}
-@keyframes blink {
-    0% { box-shadow: 0 0 15px yellow; }
-    50% { box-shadow: 0 0 0; }
-    100% { box-shadow: 0 0 15px yellow; }
-}
 
-@-webkit-keyframes blink {
-    0% { box-shadow: 0 0 15px yellow; }
-    50% { box-shadow: 0 0 0; }
-    100% { box-shadow: 0 0 15px yellow; }
-}
-	
 .beaker {
   border: 10px solid #FFF;
   border-radius: 0 0 30px 30px;
@@ -117,6 +95,28 @@ left: -74px;
     -ms-transform: rotate(49deg);
      -o-transform: rotate(49deg);
         transform: rotate(49deg);
+}
+#syringeOne.recommended>.beaker,
+#syringeTwo.recommended>.beaker,
+#syringeOne.recommended>.beaker:before,
+#syringeTwo.recommended>.beaker:before,
+#syringeOne.recommended .needle,
+#syringeTwo.recommended .needle,
+#syringeOne.recommended .needlecap,
+#syringeTwo.recommended .needlecap{
+    -webkit-animation: blink 1.0s linear infinite;
+    animation: blink 1.0s linear infinite;
+}
+@keyframes blink {
+    0% { box-shadow: 0 0 15px yellow; }
+    50% { box-shadow: 0 0 0; }
+    100% { box-shadow: 0 0 15px yellow; }
+}
+
+@-webkit-keyframes blink {
+    0% { box-shadow: 0 0 15px yellow; }
+    50% { box-shadow: 0 0 0; }
+    100% { box-shadow: 0 0 15px yellow; }
 }
 .liquid {
   bottom: 0;
@@ -593,7 +593,7 @@ function doalert(checkboxElem) {
 	   document.getElementById('prompt').style.visibility = 'hidden';
 	   document.getElementById('injred').style.visibility = 'hidden';
 	   document.getElementById('injblue').style.visibility = 'hidden';
-	   wait(2000, buttonclick, 'connect');
+	   wait(100, buttonclick, 'connect');
 	   var postColor = document.getElementById("actuator").getAttribute("data-post");
 	   console.log('postColor '+postColor)
 	   wait(4000, changeHeartColor, postColor);
@@ -608,7 +608,7 @@ function doalert(checkboxElem) {
 }
 
 function changeHeartColor(color){
-	alert('trying to change color of the heart again'+color);
+	console.log('changing again color of the heart to: '+color);
 		if (parseInt(color)<0){ //heart is red
 		    document.getElementById("heart-big").classList.add('red');
 		    document.getElementById("heart-small").classList.add('red');
@@ -699,6 +699,12 @@ function buttonclick(clickedid){
 		    document.getElementById("actuator").setAttribute("data-post", "-1");
 		}
 	}	
+	if (clickedid == 'prompt'){
+	   var postColor = document.getElementById("actuator").getAttribute("data-post");
+	   console.log('postColor '+postColor)
+	   wait(4000, changeHeartColor, postColor);
+	   document.getElementById("actuator").removeAttribute("data-post");
+	 }
             break;
           case 404:
             alert("Not Found");
