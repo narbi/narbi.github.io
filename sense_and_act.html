@@ -745,18 +745,21 @@ function buttonclick(clickedid){
 		}
 	}	
 
-	 if ((clickedid == 'injblue')||(clickedid == 'injred')||(clickedid == 'connect')){		
-		recom = document.getElementsByClassName('recommended');  
-		console.log(recom.length);
-		recom[0].classList.add('anim');
-		console.log(recom[0]);
-	 	document.getElementById("syringeOne").classList.remove('recommended'); 
-		document.getElementById("syringeTwo").classList.remove('recommended');
+	 if ((clickedid == 'injblue')||(clickedid == 'injred')||(clickedid == 'connect')){
 		postColor = document.getElementById("actuator").getAttribute("data-post");
 	   	console.log('postColor '+postColor)
 	   	wait(10000, changeHeartColor, postColor);
 	   	document.getElementById("actuator").removeAttribute("data-post");
-		wait(10000, removeElement, 'anim');
+		recom = document.getElementsByClassName('recommended');  
+		if (recom.length>0){
+			console.log(recom.length);
+			recom[0].classList.add('anim');
+			console.log(recom[0]);
+			document.getElementById("syringeOne").classList.remove('recommended'); 
+			document.getElementById("syringeTwo").classList.remove('recommended');
+			wait(10000, removeElement, 'anim');
+		}
+
 	 }		
             break;
           case 404:
