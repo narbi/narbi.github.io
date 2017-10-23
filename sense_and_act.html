@@ -3,6 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">	
+
 <style>
 html, body{height:100%;}
 body {
@@ -619,7 +620,59 @@ min-height: 20%;
 .needle{top: 114px;}
 .needlecap{top: 118px;}
 } /*mobile view*/
-	
+.loading{
+  font-size:0;
+  width:30px;
+  height:30px;
+  margin-top:5px;
+  border-radius:15px;
+  padding:0;
+  border:3px solid #FFFFFF;
+  border-bottom:3px solid rgba(255,255,255,0.0);
+  border-left:3px solid rgba(255,255,255,0.0);
+  background-color:transparent !important;
+  animation-name: rotateAnimation;
+  -webkit-animation-name: wk-rotateAnimation;
+  animation-duration: 1s;
+  -webkit-animation-duration: 1s;
+  animation-delay: 0.2s;
+  -webkit-animation-delay: 0.2s;
+  animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+}
+
+@keyframes rotateAnimation {
+    0%   {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
+@-webkit-keyframes wk-rotateAnimation {
+    0%   {-webkit-transform: rotate(0deg);}
+    100% {-webkit-transform: rotate(360deg);}
+}
+
+.fa{
+  color:#ffffff;
+  font-size:18px !important;
+  position:absolute;
+  left:50%;
+  top:50%;
+  margin-left:-9px;
+  margin-top:-9px;
+  -webkit-transform:scaleX(0) !important;
+  transform:scaleX(0) !important;
+}
+
+.finish{
+  -webkit-transform:scaleX(1) !important;
+  transform:scaleX(1) !important;
+}
+.hide-loading{
+  opacity:0;
+  -webkit-transform: rotate(0deg) !important;
+  transform: rotate(0deg) !important;
+  -webkit-transform:scale(0) !important;
+  transform:scale(0) !important;
+}	
 </style>
 <script>
 function wait(milliseconds, foo, arg){
@@ -799,6 +852,8 @@ function buttonclick(clickedid){
   <div class="fade-in"></div>
   <div class="fade-out"></div>
 </div>
+<div id="promptdone" class="fa fa-check done"></div>
+<div id="promptfailed" class="fa fa-close failed"></div>
 <button id="prompt" type="button" class="button btnFade btnBlueGreen" onclick="buttonclick(this.id)">Sense</button>
 </div>
 <div id="actuator">
@@ -818,6 +873,8 @@ function buttonclick(clickedid){
   </div>
   <div class="needle"></div>
 </div>
+<div id="injreddone" class="fa fa-check done"></div>
+<div id="injredfailed" class="fa fa-close failed"></div>
 <button id="injred" type="button" class="btnFade btnBlueGreen" onclick="buttonclick(this.id)">Inject LOW</button>
 </div>
   <div id="syringeTwo">
@@ -836,6 +893,8 @@ function buttonclick(clickedid){
   </div>
  <div class="needle"></div>
  </div>
+<div id="injbluedone" class="fa fa-check done"></div>
+<div id="injbluefailed" class="fa fa-close failed"></div>
  <button id="injblue" type="button" class="btnFade btnBlueGreen" onclick="buttonclick(this.id)">Inject HIGH</button>
 </div>
 </div>
