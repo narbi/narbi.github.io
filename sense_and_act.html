@@ -677,7 +677,7 @@ function changeHeartColor(color){
 }
 function buttonclick(clickedid){
    //alert(clickedid);
-
+    document.getElementById(clickedid).classList.add('loading');
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.open("get", "/"+clickedid);
 
@@ -689,7 +689,7 @@ function buttonclick(clickedid){
         switch(xmlhttp.status)
         {
           case 200:
-          
+          document.getElementById(clickedid).classList.remove('loading');
 	  console.log(clickedid);
 	  console.log(xmlhttp.responseText);
 	  if ((clickedid == 'prompt') || (clickedid == 'connect')){
@@ -763,12 +763,15 @@ function buttonclick(clickedid){
 	 }		
             break;
           case 404:
+	    document.getElementById(clickedid).classList.remove('loading');
             alert("Not Found");
             break;
           case 500:
+	    document.getElementById(clickedid).classList.remove('loading');
             alert("Internal Server Error");
             break;
           default:
+	    document.getElementById(clickedid).classList.remove('loading');
             alert("Unexpected Error. HTTP Status: " + xmlhttp.status);
         }
       }
